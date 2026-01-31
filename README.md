@@ -1,69 +1,93 @@
-# React + TypeScript + Vite
+# Make-A-Ton 8.0
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Official website for Make-A-Ton 8.0 - South India's Largest Hackathon, organized by CITTIC.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19
+- TypeScript
+- Vite
+- React Router
+- GSAP (animations)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js 20 or higher
+- npm
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+The site will be available at `http://localhost:5173`
+
+### Build
+
+```bash
+npm run build
+```
+
+Build output will be in the `dist` directory.
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## Deployment
+
+This project uses GitHub Actions for automated deployment to GitHub Pages.
+
+### How it works
+
+1. Push changes to the `main` branch
+2. GitHub Actions automatically builds and deploys to GitHub Pages
+3. The workflow is defined in `.github/workflows/deploy.yml`
+
+### Custom Domain Setup
+
+If using a custom domain, add a `CNAME` file to the `public` directory with your domain name.
+
+### Subdirectory Deployment
+
+If deploying to `https://<username>.github.io/<repo-name>/`, update the base path in `vite.config.ts`:
+
+```typescript
+base: '/<repo-name>/',
+```
+
+## Project Structure
+
+```
+src/
+  App.tsx          # Main app component with routing and home page
+  App.css          # Global styles
+  Newsletter.tsx   # Newsletter page
+  NotFound.tsx     # 404 page
+  main.tsx         # Entry point
+assets/            # Images and media
+public/            # Static assets (sponsors, PDF brochure)
+```
+
+## URL Redirects
+
+Short URLs are handled via React Router and redirect to external services:
+
+- `/gallery` - Photo gallery
+- `/insta`, `/linkedin`, `/whatsapp`, `/telegram`, `/x` - Social media
+- `/secondcommit`, `/callforproduction` - Forms
+
+## License
+
+All rights reserved.
