@@ -7,5 +7,5 @@ export default defineConfig({
   // GitHub Pages configuration
   // If deploying to https://<username>.github.io/<repo-name>/, set base to '/<repo-name>/'
   // If deploying to a custom domain or https://<username>.github.io/, use '/'
-  base: process.env.GITHUB_ACTIONS ? '/' : '/',
+  base: '/',
 })
