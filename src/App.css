@@ -40,12 +40,14 @@
   font-style: normal;
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Canicule Display';
   src: url('./assets/fonts/CaniculeDisplay.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-}
+} */
+/* in page, MakeoAoTon is showing instead of Make-A-Ton */
+
 
 @font-face {
   font-family: 'PlaylistScript';
@@ -195,12 +197,10 @@ html.menu-open {
   max-width: 480px;
   height: 100vh;
   height: 100dvh;
-  background: linear-gradient(
-    180deg,
-    #1a0a0f 0%,
-    #2d0a18 40%,
-    #3d0c1f 100%
-  );
+  background: linear-gradient(180deg,
+      #1a0a0f 0%,
+      #2d0a18 40%,
+      #3d0c1f 100%);
   box-shadow: -10px 0 60px rgba(0, 0, 0, 0.5);
   transform: translateX(100%);
   transition: transform 0.4s ease;
@@ -227,7 +227,7 @@ html.menu-open {
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
+  background:
     radial-gradient(circle at 30% 20%, rgba(232, 219, 204, 0.04) 0%, transparent 40%),
     radial-gradient(circle at 70% 80%, rgba(232, 219, 204, 0.03) 0%, transparent 40%);
   pointer-events: none;
@@ -294,22 +294,24 @@ html.menu-open {
 }
 
 /* Mobile adjustments for navbar */
-@media (max-width: 700px), (max-aspect-ratio: 2/3), (orientation: portrait) {
+@media (max-width: 700px),
+(max-aspect-ratio: 2/3),
+(orientation: portrait) {
   .navbar {
     padding: clamp(0.75rem, 2vw, 1.25rem);
   }
-  
+
   .menu-toggle {
     width: clamp(44px, 11vw, 50px);
     height: clamp(44px, 11vw, 50px);
   }
-  
+
   .menu-bar {
     width: 18px;
     height: 2px;
     gap: 4px;
   }
-  
+
   .menu-dropdown {
     width: 80%;
     min-width: 260px;
@@ -317,12 +319,12 @@ html.menu-open {
     padding: clamp(1.5rem, 4vw, 2rem);
     padding-top: 80px;
   }
-  
+
   .menu-item {
     font-size: clamp(1.2rem, 5vw, 1.6rem);
     padding: clamp(0.6rem, 1.5vh, 1rem) 0;
   }
-  
+
   .coming-soon-tooltip {
     font-size: 0.55rem;
     padding: 0.15rem 0.5rem;
@@ -343,9 +345,11 @@ html.menu-open {
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -354,6 +358,7 @@ html.menu-open {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -372,19 +377,19 @@ html.menu-open {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  
+
   .scroll-banner,
   .sponsor-banner,
   .sponsor-banner-1,
   .sponsor-banner-2 {
     animation: none;
   }
-  
+
   .contact-card::before,
   .contact-card::after {
     animation: none;
   }
-  
+
   .circle-text {
     animation: none;
   }
@@ -415,8 +420,15 @@ html.menu-open {
     min-height: auto;
   }
 
-  .background-image { display: none; }
-  .mobile-background-image { display: block; width: 100%; height: auto; }
+  .background-image {
+    display: none;
+  }
+
+  .mobile-background-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 
   /* Compact logo and headings for mobile composition */
   .mat-logo {
@@ -471,24 +483,61 @@ html.menu-open {
     scale: 3;
     opacity: 0.18;
     filter: blur(1.2px) brightness(0.9);
-    z-index: 999; /* stays below .kathakali-image (1000) */
+    z-index: 999;
+    /* stays below .kathakali-image (1000) */
   }
 }
 
 /* Also switch when the viewport is tall/narrow regardless of width */
-@media (max-aspect-ratio: 2/3), (orientation: portrait) {
+@media (max-aspect-ratio: 2/3),
+(orientation: portrait) {
   .app-container {
     background-image: none;
     min-height: auto;
   }
 
-  .background-image { display: none; }
-  .mobile-background-image { display: block; width: 100%; height: auto; }
+  .background-image {
+    display: none;
+  }
 
-  .circle-text { display: block; right: 4%; top: 16.5%; width: clamp(90px, 28vw, 160px); scale: 3.5; }
-  .kathakali-image { display: block; right: 2.5%; top: 17%; width: clamp(85px, 26vw, 150px); scale: 3; }
-  .kathakali-shadow { display: block; right: 3.2%; top: 18.5%; width: clamp(85px, 26vw, 150px); scale: 3; opacity: 0.18; filter: blur(1.2px) brightness(0.9); z-index: 999; }
-  .about-text { left: 6%; top: 45%; max-width: 88%; }
+  .mobile-background-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .circle-text {
+    display: block;
+    right: 4%;
+    top: 16.5%;
+    width: clamp(90px, 28vw, 160px);
+    scale: 3.5;
+  }
+
+  .kathakali-image {
+    display: block;
+    right: 2.5%;
+    top: 17%;
+    width: clamp(85px, 26vw, 150px);
+    scale: 3;
+  }
+
+  .kathakali-shadow {
+    display: block;
+    right: 3.2%;
+    top: 18.5%;
+    width: clamp(85px, 26vw, 150px);
+    scale: 3;
+    opacity: 0.18;
+    filter: blur(1.2px) brightness(0.9);
+    z-index: 999;
+  }
+
+  .about-text {
+    left: 6%;
+    top: 45%;
+    max-width: 88%;
+  }
 }
 
 .background-image {
@@ -566,7 +615,7 @@ html.menu-open {
   text-decoration: none;
   border-radius: 50px;
   border: 2px solid rgba(92, 0, 35, 0.2);
-  box-shadow: 
+  box-shadow:
     0 8px 30px rgba(92, 0, 35, 0.25),
     0 4px 15px rgba(0, 0, 0, 0.15);
   z-index: 1000;
@@ -576,7 +625,7 @@ html.menu-open {
 
 .register-button:hover {
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 
+  box-shadow:
     0 12px 40px rgba(92, 0, 35, 0.35),
     0 6px 20px rgba(0, 0, 0, 0.2);
   background: linear-gradient(135deg, #F5F5DC 0%, #fff 100%);
@@ -615,31 +664,29 @@ html.menu-open {
   letter-spacing: 0.02em;
   margin: 0;
   color: #FFD700;
-  text-shadow: 
+  text-shadow:
     0 0 8px rgba(255, 215, 0, 0.6),
     0 0 15px rgba(255, 215, 0, 0.4),
     0 0 25px rgba(255, 215, 0, 0.2);
   pointer-events: none;
-  -webkit-mask-image: radial-gradient(
-    circle 80px at var(--mouse-x, -100px) var(--mouse-y, -100px),
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.8) 25%,
-    rgba(0, 0, 0, 0.4) 50%,
-    rgba(0, 0, 0, 0.1) 70%,
-    transparent 100%
-  );
-  mask-image: radial-gradient(
-    circle 80px at var(--mouse-x, -100px) var(--mouse-y, -100px),
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.8) 25%,
-    rgba(0, 0, 0, 0.4) 50%,
-    rgba(0, 0, 0, 0.1) 70%,
-    transparent 100%
-  );
+  -webkit-mask-image: radial-gradient(circle 80px at var(--mouse-x, -100px) var(--mouse-y, -100px),
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.8) 25%,
+      rgba(0, 0, 0, 0.4) 50%,
+      rgba(0, 0, 0, 0.1) 70%,
+      transparent 100%);
+  mask-image: radial-gradient(circle 80px at var(--mouse-x, -100px) var(--mouse-y, -100px),
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.8) 25%,
+      rgba(0, 0, 0, 0.4) 50%,
+      rgba(0, 0, 0, 0.1) 70%,
+      transparent 100%);
 }
 
 /* Mobile styles for register button */
-@media (max-width: 700px), (max-aspect-ratio: 2/3), (orientation: portrait) {
+@media (max-width: 700px),
+(max-aspect-ratio: 2/3),
+(orientation: portrait) {
   .register-button {
     left: 20%;
     transform: translateX(-50%);
@@ -647,38 +694,34 @@ html.menu-open {
     padding: clamp(0.5rem, 2vw, 1rem) clamp(0.5rem, 3vw, 2rem);
     font-size: clamp(0.5rem, 3vw, 1.2rem);
   }
-  
+
   .register-button:hover {
     transform: translateX(-50%) translateY(-3px);
   }
-  
+
   .registration-deadline-wrapper {
     left: 6%;
     transform: none;
     top: 14.5%;
   }
-  
+
   .registration-deadline {
     font-size: clamp(0.7rem, 2.5vw, 0.9rem);
     text-align: center;
   }
-  
+
   .registration-deadline-glow-text {
     font-size: clamp(0.7rem, 2.5vw, 0.9rem);
-    -webkit-mask-image: radial-gradient(
-      circle 50px at var(--mouse-x, -100px) var(--mouse-y, -100px),
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0.6) 30%,
-      rgba(0, 0, 0, 0.2) 60%,
-      transparent 100%
-    );
-    mask-image: radial-gradient(
-      circle 50px at var(--mouse-x, -100px) var(--mouse-y, -100px),
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0.6) 30%,
-      rgba(0, 0, 0, 0.2) 60%,
-      transparent 100%
-    );
+    -webkit-mask-image: radial-gradient(circle 50px at var(--mouse-x, -100px) var(--mouse-y, -100px),
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.6) 30%,
+        rgba(0, 0, 0, 0.2) 60%,
+        transparent 100%);
+    mask-image: radial-gradient(circle 50px at var(--mouse-x, -100px) var(--mouse-y, -100px),
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.6) 30%,
+        rgba(0, 0, 0, 0.2) 60%,
+        transparent 100%);
   }
 }
 
@@ -785,15 +828,37 @@ html.menu-open {
 }
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.about-text p { opacity: 0; animation: fadeUp 0.7s ease forwards; }
-.about-text p:nth-child(1) { animation-delay: 0.05s; }
-.about-text p:nth-child(2) { animation-delay: 0.18s; }
-.about-text p:nth-child(3) { animation-delay: 0.31s; }
-.about-text p:nth-child(4) { animation-delay: 0.44s; }
+.about-text p {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.about-text p:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.about-text p:nth-child(2) {
+  animation-delay: 0.18s;
+}
+
+.about-text p:nth-child(3) {
+  animation-delay: 0.31s;
+}
+
+.about-text p:nth-child(4) {
+  animation-delay: 0.44s;
+}
 
 @media (max-width: 768px) {
   .about-text {
@@ -818,19 +883,29 @@ html.menu-open {
   animation: bannerScroll 20s linear infinite;
   opacity: 0.9;
   z-index: 1000;
-  filter: drop-shadow(0 2px 8px rgba(92,0,35,0.2));
+  filter: drop-shadow(0 2px 8px rgba(92, 0, 35, 0.2));
   will-change: background-position;
   transform: translateZ(0);
 }
 
 @keyframes bannerScroll {
-  from { background-position-x: 0; }
-  to { background-position-x: -1000px; }
+  from {
+    background-position-x: 0;
+  }
+
+  to {
+    background-position-x: -1000px;
+  }
 }
 
 @keyframes textScroll {
-  from { transform: translateX(100%); }
-  to { transform: translateX(-100%); }
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 /* Intersecting sponsor banners with different rotations */
@@ -847,7 +922,7 @@ html.menu-open {
   animation: sponsorScroll 18s linear infinite;
   opacity: 0.95;
   z-index: 1000;
-  filter: drop-shadow(0 3px 10px rgba(0,0,0,0.3));
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.3));
   transform-origin: center center;
   will-change: background-position, transform;
   transform: translateZ(0);
@@ -868,13 +943,23 @@ html.menu-open {
 }
 
 @keyframes sponsorScroll {
-  from { background-position-x: 0; }
-  to { background-position-x: -1000px; }
+  from {
+    background-position-x: 0;
+  }
+
+  to {
+    background-position-x: -1000px;
+  }
 }
 
 @keyframes sponsorScrollReverse {
-  from { background-position-x: -1000px; }
-  to { background-position-x: 0; }
+  from {
+    background-position-x: -1000px;
+  }
+
+  to {
+    background-position-x: 0;
+  }
 }
 
 /* Brochure download button */
@@ -975,14 +1060,14 @@ html.menu-open {
 }
 
 .contact-card {
-  background: 
+  background:
     radial-gradient(circle at 20% 20%, rgba(92, 0, 35, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 80% 80%, rgba(232, 219, 204, 0.2) 0%, transparent 50%),
     linear-gradient(135deg, rgba(232, 219, 204, 0.9) 0%, rgba(245, 245, 220, 0.8) 50%, rgba(232, 219, 204, 0.9) 100%);
   border: 1px solid transparent;
   border-radius: clamp(4px, 1.5vw, 30px);
   padding: clamp(0.2rem, 1.2vw, 2rem);
-  box-shadow: 
+  box-shadow:
     0 10px 30px rgba(92, 0, 35, 0.15),
     0 4px 12px rgba(0, 0, 0, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
@@ -1001,7 +1086,7 @@ html.menu-open {
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
+  background:
     linear-gradient(135deg, rgba(92, 0, 35, 0.1) 0%, transparent 30%, transparent 70%, rgba(92, 0, 35, 0.05) 100%),
     radial-gradient(2px 2px at 20px 30px, rgba(92, 0, 35, 0.3), transparent),
     radial-gradient(2px 2px at 40px 70px, rgba(232, 219, 204, 0.4), transparent),
@@ -1041,7 +1126,7 @@ html.menu-open {
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
+  background:
     linear-gradient(45deg, transparent 30%, rgba(232, 219, 204, 0.1) 50%, transparent 70%),
     linear-gradient(-45deg, transparent 30%, rgba(92, 0, 35, 0.05) 50%, transparent 70%);
   border-radius: 30px;
@@ -1062,24 +1147,41 @@ html.menu-open {
 }
 
 @keyframes sparkle {
-  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.7; }
-  50% { transform: scale(1.2) rotate(180deg); opacity: 1; }
+
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 1;
+  }
 }
 
 @keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes cardPulse {
-  0%, 100% { 
-    box-shadow: 
+
+  0%,
+  100% {
+    box-shadow:
       0 10px 30px rgba(92, 0, 35, 0.15),
       0 4px 12px rgba(0, 0, 0, 0.08),
       inset 0 1px 0 rgba(255, 255, 255, 0.2);
   }
-  50% { 
-    box-shadow: 
+
+  50% {
+    box-shadow:
       0 15px 40px rgba(92, 0, 35, 0.25),
       0 8px 20px rgba(0, 0, 0, 0.12),
       inset 0 1px 0 rgba(255, 255, 255, 0.3);
@@ -1087,8 +1189,10 @@ html.menu-open {
 }
 
 @keyframes gradientShift {
-  0%, 100% { 
-    background: 
+
+  0%,
+  100% {
+    background:
       linear-gradient(135deg, rgba(92, 0, 35, 0.1) 0%, transparent 30%, transparent 70%, rgba(92, 0, 35, 0.05) 100%),
       radial-gradient(2px 2px at 20px 30px, rgba(92, 0, 35, 0.3), transparent),
       radial-gradient(2px 2px at 40px 70px, rgba(232, 219, 204, 0.4), transparent),
@@ -1096,8 +1200,9 @@ html.menu-open {
       radial-gradient(1px 1px at 130px 80px, rgba(232, 219, 204, 0.3), transparent),
       radial-gradient(2px 2px at 160px 30px, rgba(92, 0, 35, 0.25), transparent);
   }
-  50% { 
-    background: 
+
+  50% {
+    background:
       linear-gradient(135deg, rgba(92, 0, 35, 0.15) 0%, transparent 20%, transparent 80%, rgba(92, 0, 35, 0.08) 100%),
       radial-gradient(2px 2px at 30px 40px, rgba(92, 0, 35, 0.4), transparent),
       radial-gradient(2px 2px at 60px 80px, rgba(232, 219, 204, 0.5), transparent),
@@ -1108,38 +1213,48 @@ html.menu-open {
 }
 
 @keyframes float {
-  0%, 100% { 
+
+  0%,
+  100% {
     transform: translateY(0px) translateX(0px);
     opacity: 0.6;
   }
-  25% { 
+
+  25% {
     transform: translateY(-2px) translateX(1px);
     opacity: 0.8;
   }
-  50% { 
+
+  50% {
     transform: translateY(-1px) translateX(-1px);
     opacity: 0.7;
   }
-  75% { 
+
+  75% {
     transform: translateY(-3px) translateX(0.5px);
     opacity: 0.9;
   }
 }
 
 @keyframes wave {
-  0%, 100% { 
+
+  0%,
+  100% {
     transform: translateX(0px) scale(1);
     opacity: 0.6;
   }
-  25% { 
+
+  25% {
     transform: translateX(2px) scale(1.02);
     opacity: 0.8;
   }
-  50% { 
+
+  50% {
     transform: translateX(-1px) scale(0.98);
     opacity: 0.7;
   }
-  75% { 
+
+  75% {
     transform: translateX(1px) scale(1.01);
     opacity: 0.9;
   }
@@ -1180,7 +1295,7 @@ html.menu-open {
   align-items: center;
   gap: clamp(0.1rem, 0.8vw, 1rem);
   padding: clamp(0.15rem, 1vw, 1.2rem);
-  background: 
+  background:
     linear-gradient(135deg, rgba(92, 0, 35, 0.08) 0%, rgba(232, 219, 204, 0.1) 100%);
   border-radius: clamp(3px, 1.2vw, 20px);
   border: 1px solid rgba(92, 0, 35, 0.15);
@@ -1205,11 +1320,11 @@ html.menu-open {
 }
 
 .contact-item:hover {
-  background: 
+  background:
     linear-gradient(135deg, rgba(92, 0, 35, 0.12) 0%, rgba(232, 219, 204, 0.15) 100%);
   border-color: rgba(92, 0, 35, 0.3);
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 
+  box-shadow:
     0 12px 30px rgba(92, 0, 35, 0.15),
     0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -1260,9 +1375,22 @@ html.menu-open {
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-  40% { transform: translateY(-5px); }
-  60% { transform: translateY(-3px); }
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-5px);
+  }
+
+  60% {
+    transform: translateY(-3px);
+  }
 }
 
 @media (max-width: 768px) {
@@ -1271,35 +1399,35 @@ html.menu-open {
     height: clamp(24px, 7vw, 36px);
     animation-duration: 16s;
   }
-  
+
   .sponsor-banner-1 {
     height: clamp(28px, 8vw, 42px);
     animation-duration: 15s;
   }
-  
+
   .sponsor-banner-2 {
     height: clamp(28px, 8vw, 42px);
     animation-duration: 15s;
   }
-  
+
   .brochure-section {
     top: 90%;
   }
-  
+
   .brochure-button {
     padding: 0.8rem 1.5rem;
     font-size: clamp(0.9rem, 3vw, 1.1rem);
   }
-  
+
   .knock-knock-text {
     top: 92%;
     font-size: clamp(1rem, 4vw, 1.6rem);
   }
-  
+
   .contact-section {
     display: none;
   }
-  
+
 }
 
 
@@ -1329,31 +1457,38 @@ html.menu-open {
 }
 
 @keyframes fontCycle {
-  0% { 
+  0% {
     font-family: 'Magz', serif;
     color: #5C0023;
   }
-  16.67% { 
+
+  16.67% {
     font-family: 'Owned', serif;
     color: #5C0023;
   }
-  33.33% { 
+
+  33.33% {
     font-family: 'YesevaOne', serif;
     color: #5C0023;
   }
-  50% { 
+
+  /* 50% {
     font-family: 'Canicule Display', serif;
     color: #5C0023;
-  }
-  66.67% { 
+  } */
+  /*showing as MakeoAoTon*/
+
+  66.67% {
     font-family: 'Swistblnk Moalang Melintang', serif;
     color: #5C0023;
   }
-  83.33% { 
+
+  83.33% {
     font-family: 'PlaylistScript', cursive;
     color: #5C0023;
   }
-  100% { 
+
+  100% {
     font-family: 'Magz', serif;
     color: #5C0023;
   }
@@ -1404,6 +1539,7 @@ html.menu-open {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -1552,6 +1688,7 @@ html {
 
 /* Pause animations when page is not visible for better performance */
 @media (prefers-reduced-motion: no-preference) {
+
   .scroll-banner,
   .sponsor-banner,
   .sponsor-banner-1,
@@ -1609,7 +1746,7 @@ html {
     width: 95%;
     top: 40%;
   }
-  
+
   .activities-heading {
     font-size: clamp(1.5rem, 5vw, 3rem);
     transform: translateY(0);
@@ -1621,15 +1758,15 @@ html {
     width: 98%;
     top: 40%;
   }
-  
+
   .activities-heading {
     transform: translateY(0);
   }
-  
+
   .social-media-section {
     bottom: clamp(1.5rem, 4vw, 3rem);
   }
-  
+
   .social-links {
     gap: clamp(1.5rem, 4vw, 2.5rem);
   }
@@ -1699,14 +1836,14 @@ html {
   z-index: 1000;
   text-align: center;
   padding: clamp(1rem, 3vw, 2rem);
-  background: 
+  background:
     radial-gradient(circle at 30% 20%, rgba(92, 0, 35, 0.05) 0%, transparent 50%),
     radial-gradient(circle at 70% 80%, rgba(232, 219, 204, 0.1) 0%, transparent 50%),
     linear-gradient(135deg, rgba(232, 219, 204, 0.8) 0%, rgba(245, 245, 220, 0.6) 50%, rgba(232, 219, 204, 0.8) 100%);
   border-radius: clamp(15px, 3vw, 30px);
   border: 2px solid rgba(92, 0, 35, 0.2);
   backdrop-filter: blur(10px);
-  box-shadow: 
+  box-shadow:
     0 15px 40px rgba(92, 0, 35, 0.15),
     0 5px 15px rgba(0, 0, 0, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
@@ -1748,7 +1885,7 @@ html {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  box-shadow: 
+  box-shadow:
     0 4px 15px rgba(92, 0, 35, 0.1),
     0 2px 8px rgba(0, 0, 0, 0.05);
   will-change: transform, box-shadow;
@@ -1769,7 +1906,7 @@ html {
 
 .sponsor-item:hover {
   transform: translateY(-5px) scale(1.05);
-  box-shadow: 
+  box-shadow:
     0 8px 25px rgba(92, 0, 35, 0.2),
     0 4px 15px rgba(0, 0, 0, 0.1);
   border-color: rgba(92, 0, 35, 0.3);
@@ -1943,15 +2080,15 @@ html {
   .wanna-connect-text.desktop-only {
     display: none;
   }
-  
+
   .wanna-connect-text.mobile-only {
     display: block;
   }
-  
+
   .contact-buttons.desktop-only {
     display: none;
   }
-  
+
   .contact-buttons.mobile-only {
     display: flex;
   }
@@ -1962,12 +2099,12 @@ html {
   .wanna-connect-text.mobile-only {
     top: 91%;
   }
-  
+
   .contact-buttons.mobile-only {
     top: 91.5%;
     transform: translateX(-50%) scale(0.95);
   }
-  
+
   .contact-buttons.mobile-only .contact-button {
     padding: clamp(0.3rem, 1.2vw, 0.6rem) clamp(0.6rem, 2.5vw, 1.2rem);
     font-size: clamp(0.7rem, 2vw, 1rem);
@@ -1978,12 +2115,12 @@ html {
   .wanna-connect-text.mobile-only {
     top: 88.5%;
   }
-  
+
   .contact-buttons.mobile-only {
     top: 90%;
     transform: translateX(-50%) scale(0.85);
   }
-  
+
   .contact-buttons.mobile-only .contact-button {
     padding: clamp(0.25rem, 1vw, 0.5rem) clamp(0.5rem, 2vw, 1rem);
     font-size: clamp(0.6rem, 1.8vw, 0.9rem);
@@ -1994,38 +2131,40 @@ html {
   .wanna-connect-text.mobile-only {
     top: 87%;
   }
-  
+
   .contact-buttons.mobile-only {
     top: 88.5%;
     transform: translateX(-50%) scale(0.75);
   }
-  
+
   .contact-buttons.mobile-only .contact-button {
     padding: clamp(0.2rem, 0.8vw, 0.4rem) clamp(0.4rem, 1.5vw, 0.8rem);
     font-size: clamp(0.5rem, 1.5vw, 0.8rem);
   }
 }
 
-@media (max-width: 700px), (max-aspect-ratio: 2/3), (orientation: portrait) {
+@media (max-width: 700px),
+(max-aspect-ratio: 2/3),
+(orientation: portrait) {
   .wanna-connect-text.desktop-only {
     display: none;
   }
-  
+
   .wanna-connect-text.mobile-only {
     display: block;
     top: 91%;
   }
-  
+
   .contact-buttons.desktop-only {
     display: none;
   }
-  
+
   .contact-buttons.mobile-only {
     display: flex;
     top: 92.5%;
     transform: translateX(-50%) scale(0.98);
   }
-  
+
   .contact-buttons.mobile-only .contact-button {
     padding: clamp(0.35rem, 1.5vw, 0.7rem) clamp(0.7rem, 3vw, 1.3rem);
     font-size: clamp(0.75rem, 2.2vw, 1.1rem);
@@ -2038,7 +2177,7 @@ html {
     grid-template-columns: repeat(auto-fit, minmax(clamp(90px, 10vw, 180px), 1fr));
     gap: clamp(0.7rem, 2vw, 1.8rem);
   }
-  
+
   .sponsor-item {
     height: clamp(65px, 10vw, 150px);
   }
@@ -2050,17 +2189,17 @@ html {
     width: clamp(280px, 95%, 1000px);
     padding: clamp(0.8rem, 2.5vw, 1.5rem);
   }
-  
+
   .sponsors-heading {
     font-size: clamp(1.5rem, 5vw, 2.5rem);
     top: 47%;
   }
-  
+
   .sponsors-grid {
     grid-template-columns: repeat(auto-fit, minmax(clamp(80px, 15vw, 130px), 1fr));
     gap: clamp(0.6rem, 2vw, 1.2rem);
   }
-  
+
   .sponsor-item {
     height: clamp(60px, 12vw, 120px);
   }
@@ -2071,7 +2210,7 @@ html {
     grid-template-columns: repeat(2, 1fr);
     gap: clamp(0.5rem, 1.5vw, 0.8rem);
   }
-  
+
   .sponsor-item {
     height: clamp(50px, 10vw, 100px);
   }
@@ -2081,7 +2220,7 @@ html {
   .sponsors-grid {
     gap: clamp(0.4rem, 1.2vw, 0.6rem);
   }
-  
+
   .sponsor-item {
     height: clamp(45px, 8vw, 90px);
   }
@@ -2089,26 +2228,28 @@ html {
 
 
 /* Ensure mobile overrides take precedence over base decorative positions */
-@media (max-width: 700px), (max-aspect-ratio: 2/3), (orientation: portrait) {
+@media (max-width: 700px),
+(max-aspect-ratio: 2/3),
+(orientation: portrait) {
   .hackathon-subtitle {
     font-size: clamp(1.6rem, 7vw, 8rem) !important;
     top: 10.5% !important;
   }
-  
+
   .festival-quote {
     left: 4% !important;
     top: 46% !important;
     font-size: clamp(1.1rem, 5vw, 1.8rem) !important;
     max-width: 92% !important;
   }
-  
+
   .about-text {
     left: 6% !important;
     top: 49% !important;
     max-width: 88% !important;
     font-size: clamp(0.6rem, 2.7vw, 4rem) !important;
   }
-  
+
   .circle-text {
     right: 4% !important;
     top: 19.55% !important;
@@ -2134,7 +2275,7 @@ html {
     opacity: 0.18 !important;
     z-index: 999 !important;
   }
-  
+
   .sponsors-heading {
     font-size: clamp(1.5rem, 5vw, 2.5rem) !important;
     top: 71.5% !important;
@@ -2145,7 +2286,7 @@ html {
     margin: 0 !important;
     padding: 0 !important;
   }
-  
+
   .previous-sponsors-section {
     top: 73% !important;
     left: 50% !important;
@@ -2157,32 +2298,32 @@ html {
     text-align: center !important;
     margin: 0 !important;
   }
-  
+
   .sponsors-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: clamp(0.08rem, 1.2vw, 0.6rem) !important;
   }
-  
+
   .sponsor-item {
     height: clamp(10px, 8vw, 44px) !important;
   }
-  
+
   .sponsor-logo {
     max-width: clamp(65%, 5.5vw, 80%) !important;
     max-height: clamp(65%, 5.5vw, 80%) !important;
   }
-  
+
   .brochure-section {
     top: 88.5% !important;
     transform: translateX(-50%) scale(0.6) !important;
-    }
-  
+  }
+
   .brochure-button {
     padding: 0.5rem 1rem !important;
     font-size: clamp(0.8rem, 3.5vw, 1.2rem) !important;
     white-space: nowrap !important;
   }
-  
+
   .knock-knock-text {
     top: 94.3% !important;
     left: -3% !important;
@@ -2194,25 +2335,25 @@ html {
     line-height: 1.2 !important;
     text-align: center !important;
   }
-  
+
   .knock-knock-text::before {
     content: "Knock Knock\A It is Us!" !important;
     white-space: pre !important;
   }
-  
+
   .knock-knock-text {
     font-size: 0 !important;
   }
-  
+
   .knock-knock-text::before {
     font-size: clamp(1rem, 6vw, 8rem) !important;
   }
-  
+
   .contact-section {
     display: none !important;
   }
-  
-  
+
+
   .social-media-section {
     top: 98.5% !important;
     bottom: clamp(1.5rem, 4vw, 3rem) !important;
@@ -2231,7 +2372,7 @@ html {
   .sponsor-banner-1 {
     top: 88% !important;
     height: clamp(20px, 6vw, 36px) !important;
-    
+
   }
 
   .sponsor-banner-2 {
@@ -2241,7 +2382,9 @@ html {
 }
 
 /* Mobile override for Tracks & Prizes scrolling banner */
-@media (max-width: 700px), (max-aspect-ratio: 2/3), (orientation: portrait) {
+@media (max-width: 700px),
+(max-aspect-ratio: 2/3),
+(orientation: portrait) {
   .scroll-banner {
     top: 68% !important;
     height: clamp(16px, 5vw, 28px) !important;

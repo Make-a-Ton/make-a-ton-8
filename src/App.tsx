@@ -8,6 +8,7 @@ import circleTextImage from '../assets/circle-text.png'
 import matLogo from '../assets/MAT new logo.png'
 import NotFound from './NotFound'
 import Newsletter from './Newsletter'
+import CampusAmb from './CampusAmb'
 
 function Home() {
   const cursorRef = useRef<HTMLDivElement>(null)
@@ -266,6 +267,13 @@ function Home() {
             Upside Down Hacknight
           </a>
           <a 
+            href="/ca" 
+            className="menu-item"
+            onClick={() => setMenuOpen(false)}
+          >
+            Campus Ambassador
+          </a>
+          <a 
             href="/gallery" 
             className="menu-item"
             onClick={() => setMenuOpen(false)}
@@ -405,7 +413,7 @@ function Home() {
           
           <div className="contact-details">
             <div className="contact-item">
-              <span className="contact-icon">📞</span>
+              <span className="contact-icon"></span>
               <div className="contact-info">
                 <span className="contact-label">Ring-a-ding-ding! </span>
                 <a href="tel:+918848008766" className="contact-link">
@@ -415,7 +423,7 @@ function Home() {
             </div>
             
             <div className="contact-item">
-              <span className="contact-icon">📧</span>
+              <span className="contact-icon"></span>
               <div className="contact-info">
                 <span className="contact-label">Drop us a mail!  </span>
                 <a href="mailto:organizer@makeaton.in" className="contact-link">
@@ -440,11 +448,11 @@ function Home() {
       {/* Contact Buttons - Desktop */}
       <div className="contact-buttons desktop-only">
         <a href="tel:+918848008766" className="contact-button call-button">
-          📞 Call Us
+          Call Us
           <div className="button-subtext">Make sure to say "<em>Hey <strong>Austin!</strong></em>"</div>
         </a>
         <a href="mailto:organizer@makeaton.in" className="contact-button email-button">
-          📧 Email Us
+           Email Us
         </a>
         <a href="https://2024.makeaton.in" target="_blank" rel="noopener noreferrer" className="previous-edition-link">
           Check out the previous edition!
@@ -454,11 +462,11 @@ function Home() {
       {/* Contact Buttons - Mobile */}
       <div className="contact-buttons mobile-only">
         <a href="tel:+918848008766" className="contact-button call-button">
-          📞 Call Us
+           Call Us
           <div className="button-subtext">Make sure to say "<em>Hey <strong>Austin!</strong></em>"</div>
         </a>
         <a href="mailto:organizer@makeaton.in" className="contact-button email-button">
-          📧 Email Us
+           Email Us
         </a>
         <a href="https://2024.makeaton.in" target="_blank" rel="noopener noreferrer" className="previous-edition-link">
           Check out the previous edition!
@@ -621,6 +629,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/newsletter" element={<Newsletter />} />
+      <Route path="/ca" element={<CampusAmb />} />
       
       {/* Redirects */}
       <Route path="/secondcommit" element={<ExternalRedirect to="https://tally.so/r/pbe2E8" />} />
