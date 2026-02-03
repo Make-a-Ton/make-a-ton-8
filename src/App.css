@@ -912,7 +912,8 @@ html.menu-open {
 .sponsor-banner {
   position: absolute;
   left: 50%;
-  top: 77%;
+  top: 73%;
+  /* Moved from 77% */
   width: 100vw;
   height: clamp(32px, 6vw, 48px);
   background-image: url('../assets/Wanna Sponsor US_ Wanna Sponsor Us_ Wanna Sponsor US_ Wanna Sponsor Us_.png');
@@ -966,7 +967,8 @@ html.menu-open {
 .brochure-section {
   position: absolute;
   left: 50%;
-  top: 79%;
+  top: 76%;
+  /* Moved from 79% */
   transform: translateX(-50%);
   z-index: 1000;
   text-align: center;
@@ -1031,18 +1033,14 @@ html.menu-open {
 }
 
 /* Knock Knock text */
+/* Knock Knock text */
 .knock-knock-text {
-  position: absolute;
-  left: 50%;
-  top: 84%;
-  transform: translateX(-50%);
   font-family: 'Canicule Display', serif;
   color: #5C0023;
-  font-size: clamp(2rem, 4.5vw, 8rem);
+  font-size: clamp(2rem, 5vw, 6rem);
   font-weight: bold;
   text-align: center;
   margin: 0;
-  z-index: 1000;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   letter-spacing: 1px;
 }
@@ -1830,7 +1828,8 @@ html {
 .previous-sponsors-section {
   position: absolute;
   left: 50%;
-  top: 58.5%;
+  top: 56.5%;
+  /* Moved from 58.5% */
   transform: translateX(-50%);
   width: clamp(300px, 90%, 1200px);
   z-index: 1000;
@@ -1859,7 +1858,8 @@ html {
   letter-spacing: 1px;
   position: absolute;
   left: 50%;
-  top: 54%;
+  top: 52%;
+  /* Moved from 54% */
   transform: translateX(-50%);
   z-index: 1000;
   text-align: center;
@@ -1934,51 +1934,26 @@ html {
 }
 
 /* Wanna Connect Text - Desktop */
-.wanna-connect-text.desktop-only {
-  position: absolute;
-  left: 50%;
-  top: 87%;
-  transform: translateX(-50%);
+/* Wanna Connect Text */
+.wanna-connect-text {
   font-family: 'Canicule', serif;
   color: #5C0023;
   font-size: clamp(2rem, 3vw, 3rem);
   font-weight: 600;
-  text-align: center;
-  margin: 0;
-  z-index: 1000;
+  margin: 0 0 1rem 0;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  display: block;
 }
 
 /* Wanna Connect Text - Mobile */
-.wanna-connect-text.mobile-only {
-  position: absolute;
-  left: 60%;
-  top: 91.5%;
-  width: 100%;
-  transform: translateX(-50%);
-  font-family: 'Canicule', serif;
-  color: #5C0023;
-  font-size: clamp(1.2rem, 4vw, 2.5rem);
-  font-weight: 600;
-  text-align: center;
-  margin: 0;
-  z-index: 1000;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  display: none;
-}
+
 
 /* Contact Buttons - Desktop */
-.contact-buttons.desktop-only {
-  position: absolute;
-  left: 50%;
-  top: 89%;
-  transform: translateX(-50%);
+.contact-buttons {
   display: flex;
   flex-direction: column;
   gap: clamp(0.5rem, 2vw, 1rem);
   align-items: center;
-  z-index: 1000;
+  /* Changed from flex-end */
 }
 
 .contact-buttons.desktop-only .contact-button {
@@ -1987,17 +1962,7 @@ html {
 }
 
 /* Contact Buttons - Mobile */
-.contact-buttons.mobile-only {
-  position: absolute;
-  left: 60%;
-  top: 93%;
-  transform: translateX(-50%);
-  display: none;
-  flex-direction: column;
-  gap: clamp(0.1rem, 1vw, 1.5rem);
-  align-items: center;
-  z-index: 1000;
-}
+
 
 .contact-buttons.mobile-only .contact-button {
   width: 100%;
@@ -2422,4 +2387,102 @@ html {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   padding-right: 2em;
   animation: textScroll 20s linear infinite;
+}
+
+/* Bottom Section Layout - New Implementation */
+.bottom-section {
+  position: absolute;
+  top: 83%;
+  /* Moved up from 85% */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.bottom-content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.faq-section-container {
+  flex: 1;
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* FAQ Section Title */
+.faq-section-title {
+  font-family: 'Canicule', serif;
+  color: #5C0023;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.connect-section-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Changed from flex-end */
+  text-align: center;
+  /* Changed from right */
+  max-width: 45%;
+}
+
+/* Responsive adjustments for bottom section */
+@media (max-width: 768px) {
+  .bottom-section {
+    position: relative;
+    top: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .bottom-content-container {
+    flex-direction: column-reverse;
+    /* Connect on top, FAQ below */
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .faq-section-container,
+  .connect-section-container {
+    max-width: 100%;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-buttons {
+    align-items: center;
+  }
+
+  /* Override knock-knock text position for mobile if needed */
+  .knock-knock-text {
+    display: none !important;
+    /* Hide on mobile */
+  }
+
+  /* Mobile-specific FAQ styling */
+  .faq-section-title {
+    font-size: clamp(1.8rem, 5vw, 2.5rem) !important;
+  }
 }
