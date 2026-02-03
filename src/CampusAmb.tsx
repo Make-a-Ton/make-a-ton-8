@@ -27,7 +27,7 @@ function CampusAmb() {
         {/* Form Container */}
         <div className="campus-amb-form-container">
           <iframe src="https://makemypass.com/event/make-a-ton-campus-ambassador/?type=embed"
-            width="500"
+            width="100%"
             height="950">
 
           </iframe>
