@@ -354,10 +354,10 @@ function Home() {
         }}
       >
         <p className="registration-deadline">
-          Registrations end on 2nd Feb!
+          Registrations end on 5th Feb!
         </p>
         <span className="registration-deadline-glow-text">
-          Registrations end on 2nd Feb!
+          Registrations end on 5th Feb!
         </span>
       </div>
       <p className="festival-quote">
