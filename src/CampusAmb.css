@@ -28,6 +28,8 @@
     font-style: normal;
 }
 
+
+
 .campus-amb-page {
     min-height: 100vh;
     width: 100%;
@@ -98,11 +100,16 @@
 }
 
 /* Content container */
+p {
+    text-align: center;
+}
+
+
 .campus-amb-content {
     position: relative;
     z-index: 10;
     width: 100%;
-    max-width: 600px;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -142,13 +149,14 @@
     line-height: 1.1;
 }
 
-.campus-amba-subtitle {
+.campus-amb-subtitle {
     font-family: 'Racama', serif;
-    color: #e8dbcc80;
+    color: #E8DBCC;
     font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-    margin: 0;
+    margin: 0 auto;
     line-height: 1.5;
     max-width: 400px;
+    text-align: center;
 }
 
 /* Form container */
@@ -254,4 +262,157 @@
 .campus-amb-page::-webkit-scrollbar {
     width: 0;
     background: transparent;
+}
+
+/* Leaderboard Styles */
+.leaderboard-container {
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+    animation: fadeInUp 0.6s ease-out 0.15s both;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.leaderboard-title {
+    font-family: 'YesevaOne', serif;
+    color: #E8DBCC;
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+    text-shadow: 0 4px 20px rgba(92, 0, 35, 0.4);
+}
+
+.leaderboard-table-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: linear-gradient(135deg,
+            rgba(232, 219, 204, 0.08) 0%,
+            rgba(232, 219, 204, 0.04) 100%);
+    border: 1px solid rgba(232, 219, 204, 0.15);
+    border-radius: 24px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Racama', serif;
+    color: #E8DBCC;
+    text-align: left;
+}
+
+.leaderboard-table th {
+    padding: 1.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: rgba(232, 219, 204, 0.8);
+    border-bottom: 1px solid rgba(232, 219, 204, 0.1);
+    background: rgba(92, 0, 35, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.leaderboard-table td {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid rgba(232, 219, 204, 0.05);
+    font-size: 1rem;
+    transition: background 0.2s ease;
+}
+
+.leaderboard-table tr:last-child td {
+    border-bottom: none;
+}
+
+.leaderboard-table tr:hover td {
+    background: rgba(232, 219, 204, 0.05);
+}
+
+.leaderboard-name-cell {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.leaderboard-name-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.leaderboard-institution-mobile {
+    display: none;
+}
+
+.leaderboard-rank {
+    font-family: 'YesevaOne', serif;
+    color: rgba(232, 219, 204, 0.5);
+    font-size: 1.2rem;
+    min-width: 2rem;
+}
+
+.leaderboard-score-cell {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #fff;
+    text-align: center;
+}
+
+.leaderboard-table th:last-child,
+.leaderboard-table td:last-child {
+    text-align: center;
+}
+
+/* Mobile responsiveness for table */
+@media (max-width: 768px) {
+
+    .leaderboard-table th,
+    .leaderboard-table td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .leaderboard-rank {
+        font-size: 1rem;
+        min-width: 1.5rem;
+    }
+
+    .leaderboard-title {
+        font-size: 2rem;
+    }
+
+    .campus-amb-page {
+        padding-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .leaderboard-table th:nth-child(2),
+    .leaderboard-institution-cell {
+        display: none;
+        /* Hide Institution column on very small screens */
+    }
+
+    .leaderboard-institution-mobile {
+        display: block;
+        font-size: 0.7rem;
+        color: rgba(232, 219, 204, 0.6);
+        font-weight: normal;
+        margin-top: 2px;
+    }
+
+    .leaderboard-table th,
+    .leaderboard-table td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .leaderboard-name-cell {
+        gap: 0.5rem;
+    }
 }

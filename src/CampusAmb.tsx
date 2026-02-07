@@ -1,5 +1,6 @@
 import './CampusAmb.css'
 import matLogo from '../assets/MAT new logo.png'
+import Leaderboard from './Leaderboard'
 
 function CampusAmb() {
 
@@ -24,14 +25,16 @@ function CampusAmb() {
           </p>
         </div>
 
+        <Leaderboard />
+
         {/* Form Container */}
-        <div className="campus-amb-form-container">
+        {/* <div className="campus-amb-form-container">
           <iframe src="https://makemypass.com/event/make-a-ton-campus-ambassador/?type=embed"
             width="100%"
             height="950">
 
           </iframe>
-        </div>
+        </div> */}
 
         {/* Footer */}
         <div className="campus-amb-footer">
