@@ -1,12 +1,5 @@
 [
     {
-        "key": "santa007",
-        "name": "Shreeram V",
-        "institution": "Ahalia School of Engineering and Technology",
-        "branch": "ECE",
-        "score": 0
-    },
-    {
         "key": "10101",
         "name": "Amal Mathew Abraham",
         "institution": "SOE, CUSAT",
@@ -46,7 +39,7 @@
         "name": "Amrutha M",
         "institution": "SOE, CUSAT",
         "branch": "ECE",
-        "score": 11
+        "score": 24
     },
     {
         "key": "TonCET101",
@@ -123,7 +116,7 @@
         "name": "ADIL M",
         "institution": "SOE, CUSAT",
         "branch": "Civil Engineering",
-        "score": 66
+        "score": 85
     },
     {
         "key": "krishna",
@@ -151,7 +144,7 @@
         "name": "Joel Benoy",
         "institution": "SOE, CUSAT",
         "branch": "CSE",
-        "score": 4
+        "score": 10
     },
     {
         "key": "KHIZAA",

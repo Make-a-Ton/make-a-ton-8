@@ -606,9 +606,9 @@ function Home() {
           <div className="sponsor-item">
             <img src="/sponsors/Fulva-transparent.png" alt="Fulva" className="sponsor-logo" />
           </div>
-          <div className="sponsor-item">
+          {/* <div className="sponsor-item">
             <img src="/sponsors/Redbull.png" alt="Red Bull" className="sponsor-logo" />
-          </div>
+          </div> */}
         </div>
       </div>
       </div>
