@@ -650,7 +650,7 @@ html.menu-open {
 .registration-deadline-wrapper {
   position: absolute;
   left: 6%;
-  top: 13.5%;
+  top: 11%;
   z-index: 1000;
   display: inline-block;
 }

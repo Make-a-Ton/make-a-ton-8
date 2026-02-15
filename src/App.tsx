@@ -325,14 +325,14 @@ function Home() {
       </p>
       
       {/* Registration Button */}
-      <a 
+      {/* <a 
         href="https://makemypass.com/event/makeaton/" 
         target="_blank" 
         rel="noopener noreferrer"
         className="register-button"
       >
         Register Now
-      </a>
+      </a> */}
       <div 
         className="registration-deadline-wrapper"
         onMouseMove={(e) => {
@@ -354,10 +354,10 @@ function Home() {
         }}
       >
         <p className="registration-deadline">
-          Registrations end on 5th Feb!
+          21 - 22 Feb
         </p>
         <span className="registration-deadline-glow-text">
-          Registrations end on 5th Feb!
+          21 - 22 Feb
         </span>
       </div>
       <p className="festival-quote">
