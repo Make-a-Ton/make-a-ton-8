@@ -1,0 +1,115 @@
+/* Background and Layout Styles */
+
+.background-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  draggable: false;
+}
+
+/* Mobile/portrait: use dedicated background image and hide the desktop bg */
+@media (max-width: 700px) {
+  .app-container {
+    background-image: none;
+    min-height: auto;
+  }
+
+  .background-image {
+    display: none;
+  }
+
+  .mobile-background-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Compact logo and headings for mobile composition */
+  /* .mat-logo {
+    left: 5%;
+    top: 2%;
+    width: clamp(120px, 40vw, 220px);
+  }
+
+  .hackathon-subtitle {
+    left: 5%;
+    top: 20%;
+    font-size: clamp(5rem, 6vw, 5rem);
+  }
+
+  .festival-quote {
+    left: 4%;
+    top: 24%;
+    font-size: clamp(1.1rem, 5vw, 1.8rem);
+    max-width: 92%;
+  }
+
+  .about-text {
+    left: 6%;
+    top: 45%;
+    max-width: 88%;
+  } */
+
+  /* Place key decorative assets to the right of the logo */
+  /* Decorative elements are styled in src/styles/decorative.css. */
+  /* background.css should only control the page background images for mobile. */
+}
+
+/* Also switch when the viewport is tall/narrow regardless of width */
+@media (max-aspect-ratio: 2/3),
+(orientation: portrait) {
+  .app-container {
+    background-image: none;
+    min-height: auto;
+  }
+
+  .background-image {
+    display: none;
+  }
+
+  .mobile-background-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .circle-text {
+    /* decorative positioning handled in decorative.css */
+  }
+
+  .kathakali-image {
+    /* decorative positioning handled in decorative.css */
+  }
+
+  .kathakali-shadow {
+    /* decorative positioning handled in decorative.css */
+  }
+
+  .about-text {
+    left: 6%;
+    top: 45%;
+    max-width: 88%;
+  }
+}
+
+.make-a-ton-text {
+  font-family: 'Swistblnk Moalang Melintang', serif;
+  color: #E8DBCC;
+  font-size: clamp(2rem, 14vw, 14rem);
+  font-weight: normal;
+  position: absolute;
+  left: 8%;
+  top: 3.7%;
+  transform: translateY(-50%);
+  margin: 0;
+  z-index: 1000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 0.9;
+}

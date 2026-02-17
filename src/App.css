@@ -1,0 +1,1117 @@
+/* Make-A-Ton Website - CSS Modules Index */
+/* All styles are imported from modular CSS files for better organization and maintainability */
+
+/* Core Imports */
+@import './styles/fonts.css';
+@import './styles/variables.css';
+@import './styles/animations.css';
+
+/* Layout & Component Styles */
+@import './styles/navbar.css';
+@import './styles/background.css';
+@import './styles/hero.css';
+@import './styles/about.css';
+@import './styles/contact.css';
+@import './styles/social.css';
+@import './styles/decorative.css';
+
+/* Responsive Design */
+@import './styles/responsive.css';
+
+
+/* ==============================================================================
+   MAIN APPLICATION STYLES - MINIMAL ONLY
+   All component-specific styles have been moved to their respective files in src/styles/
+   ============================================================================== */
+
+/* Root Container */
+#root {
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  text-align: left;
+  overflow-x: hidden;
+}
+
+/* Main App Container */
+.app-container {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Utility Classes */
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Reduce animations for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .scroll-banner,
+  .sponsor-banner,
+  .sponsor-banner-1,
+  .sponsor-banner-2 {
+    animation: none;
+  }
+
+  .contact-card::before,
+  .contact-card::after {
+    animation: none;
+  }
+
+  .circle-text {
+    animation: none;
+  }
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  text-align: left;
+  overflow-x: hidden;
+}
+
+/* Accessibility - Reduce animations for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+.background-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  draggable: false;
+}
+
+.make-a-ton-text {
+  font-family: 'Swistblnk Moalang Melintang', serif;
+  color: #E8DBCC;
+  font-size: clamp(2rem, 14vw, 14rem);
+  font-weight: normal;
+  position: absolute;
+  left: 8%;
+  top: 3.7%;
+  transform: translateY(-50%);
+  margin: 0;
+  z-index: 1000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 0.9;
+}
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* DUPLICATE: Moved to about.css - Line 151 */
+/*.scroll-banner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 47%;
+  height: clamp(28px, 5vw, 50px);
+  background-image: url('../assets/Tracks and Prizes coming soon... Tracks and Prizes coming soon... Tracks and Prizes coming soon... Tracks and Prizes coming soon....png');
+  background-size: auto 100%;
+  background-repeat: repeat-x;
+  background-position: 0 50%;
+  animation: bannerScroll 20s linear infinite;
+  opacity: 0.9;
+  z-index: 1000;
+  filter: drop-shadow(0 2px 8px rgba(92, 0, 35, 0.2));
+  will-change: background-position;
+  transform: translateZ(0);
+}*/
+
+/* DUPLICATE: Moved to animations.css - Line 15 */
+/*@keyframes bannerScroll {
+  from {
+    background-position-x: 0;
+  }
+
+  to {
+    background-position-x: -1000px;
+  }
+}*/
+
+@keyframes textScroll {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* DUPLICATE: Moved to variables.css and decorative.css */
+/*
+.sponsor-banner {
+  position: absolute;
+  left: 50%;
+  top: 77%;
+  width: 100vw;
+  height: clamp(32px, 6vw, 48px);
+  background-image: url('../assets/Wanna Sponsor US_ Wanna Sponsor Us_ Wanna Sponsor US_ Wanna Sponsor Us_.png');
+  background-size: auto 100%;
+  background-repeat: repeat-x;
+  background-position: 0 50%;
+  animation: sponsorScroll 18s linear infinite;
+  opacity: 0.95;
+  z-index: 1000;
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.3));
+  transform-origin: center center;
+  will-change: background-position, transform;
+  transform: translateZ(0);
+}
+
+.sponsor-banner-1 {
+  transform: translate(-50%, -50%) rotate(5deg) translateZ(0);
+  z-index: 1001;
+  animation: sponsorScroll 18s linear infinite;
+  will-change: background-position, transform;
+}
+
+.sponsor-banner-2 {
+  transform: translate(-50%, -50%) rotate(-5deg) translateZ(0);
+  z-index: 1000;
+  animation: sponsorScrollReverse 18s linear infinite;
+  will-change: background-position, transform;
+}
+
+@keyframes sponsorScroll {
+  from {
+    background-position-x: 0;
+  }
+
+  to {
+    background-position-x: -1000px;
+  }
+}
+
+@keyframes sponsorScrollReverse {
+  from {
+    background-position-x: -1000px;
+  }
+
+  to {
+    background-position-x: 0;
+  }
+}
+*/
+
+
+/* Knock Knock text */
+.knock-knock-text {
+  position: absolute;
+  left: 50%;
+  top: 84%;
+  transform: translateX(-50%);
+  font-family: 'Canicule Display', serif;
+  color: #5C0023;
+  font-size: clamp(2rem, 4.5vw, 8rem);
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  z-index: 1000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+}
+
+@keyframes sparkle {
+
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 1;
+  }
+}
+
+/* DUPLICATE: Moved to animations.css */
+/*@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}*/
+
+@keyframes cardPulse {
+
+  0%,
+  100% {
+    box-shadow:
+      0 10px 30px rgba(92, 0, 35, 0.15),
+      0 4px 12px rgba(0, 0, 0, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  50% {
+    box-shadow:
+      0 15px 40px rgba(92, 0, 35, 0.25),
+      0 8px 20px rgba(0, 0, 0, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes gradientShift {
+
+  0%,
+  100% {
+    background:
+      linear-gradient(135deg, rgba(92, 0, 35, 0.1) 0%, transparent 30%, transparent 70%, rgba(92, 0, 35, 0.05) 100%),
+      radial-gradient(2px 2px at 20px 30px, rgba(92, 0, 35, 0.3), transparent),
+      radial-gradient(2px 2px at 40px 70px, rgba(232, 219, 204, 0.4), transparent),
+      radial-gradient(1px 1px at 90px 40px, rgba(92, 0, 35, 0.2), transparent),
+      radial-gradient(1px 1px at 130px 80px, rgba(232, 219, 204, 0.3), transparent),
+      radial-gradient(2px 2px at 160px 30px, rgba(92, 0, 35, 0.25), transparent);
+  }
+
+  50% {
+    background:
+      linear-gradient(135deg, rgba(92, 0, 35, 0.15) 0%, transparent 20%, transparent 80%, rgba(92, 0, 35, 0.08) 100%),
+      radial-gradient(2px 2px at 30px 40px, rgba(92, 0, 35, 0.4), transparent),
+      radial-gradient(2px 2px at 60px 80px, rgba(232, 219, 204, 0.5), transparent),
+      radial-gradient(1px 1px at 100px 50px, rgba(92, 0, 35, 0.3), transparent),
+      radial-gradient(1px 1px at 140px 90px, rgba(232, 219, 204, 0.4), transparent),
+      radial-gradient(2px 2px at 170px 40px, rgba(92, 0, 35, 0.35), transparent);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.6;
+  }
+
+  25% {
+    transform: translateY(-2px) translateX(1px);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: translateY(-1px) translateX(-1px);
+    opacity: 0.7;
+  }
+
+  75% {
+    transform: translateY(-3px) translateX(0.5px);
+    opacity: 0.9;
+  }
+}
+
+@keyframes wave {
+
+  0%,
+  100% {
+    transform: translateX(0px) scale(1);
+    opacity: 0.6;
+  }
+
+  25% {
+    transform: translateX(2px) scale(1.02);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: translateX(-1px) scale(0.98);
+    opacity: 0.7;
+  }
+
+  75% {
+    transform: translateX(1px) scale(1.01);
+    opacity: 0.9;
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-5px);
+  }
+
+  60% {
+    transform: translateY(-3px);
+  }
+}
+
+/* DUPLICATE: Moved to about.css and responsive.css */
+/*@media (max-width: 768px) {
+  .scroll-banner {
+    top: 58%;
+    height: clamp(24px, 7vw, 36px);
+    animation-duration: 16s;
+  }
+
+  .sponsor-banner-1 {
+    height: clamp(28px, 8vw, 42px);
+    animation-duration: 15s;
+  }
+
+  .sponsor-banner-2 {
+    height: clamp(28px, 8vw, 42px);
+    animation-duration: 15s;
+  }
+
+  .brochure-section {
+    top: 90%;
+  }
+
+  .brochure-button {
+    padding: 0.8rem 1.5rem;
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+
+  .knock-knock-text {
+    top: 92%;
+    font-size: clamp(1rem, 4vw, 1.6rem);
+  }
+
+  .contact-section {
+    display: none;
+  }
+
+}*/
+
+@keyframes fontCycle {
+  0% {
+    font-family: 'Magz', serif;
+    color: #5C0023;
+  }
+
+  16.67% {
+    font-family: 'Owned', serif;
+    color: #5C0023;
+  }
+
+  33.33% {
+    font-family: 'YesevaOne', serif;
+    color: #5C0023;
+  }
+
+  /* 50% {
+    font-family: 'Canicule Display', serif;
+    color: #5C0023;
+  } */
+  /*showing as MakeoAoTon*/
+
+  66.67% {
+    font-family: 'Swistblnk Moalang Melintang', serif;
+    color: #5C0023;
+  }
+
+  83.33% {
+    font-family: 'PlaylistScript', cursive;
+    color: #5C0023;
+  }
+
+  100% {
+    font-family: 'Magz', serif;
+    color: #5C0023;
+  }
+}
+
+
+
+/* DUPLICATE: Moved to animations.css */
+/*@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}*/
+
+.kathakali-shadow {
+  position: absolute;
+  right: -1%;
+  top: 7%;
+  scale: 1.7;
+  width: clamp(95px, 32vw, 370px);
+  height: auto;
+  z-index: 999;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  draggable: false;
+  filter: brightness(1);
+  opacity: 0.1;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+
+/* Hide scrollbar but keep functionality */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: transparent;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* For IE and Edge */
+body {
+  -ms-overflow-style: none;
+}
+
+/* Additional body styling for consistent scroll behavior */
+body {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+}
+
+/* Optimize scrolling performance */
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hardware acceleration for better performance - scoped to app-container to not break fixed positioning */
+.app-container * {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Ensure navbar elements are not affected by transforms */
+.navbar,
+.navbar *,
+.menu-overlay,
+.menu-dropdown,
+.menu-dropdown * {
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  -webkit-perspective: none;
+  perspective: none;
+  transform-style: flat;
+}
+
+/* Pause animations when page is not visible for better performance */
+@media (prefers-reduced-motion: no-preference) {
+
+  .scroll-banner,
+  .sponsor-banner,
+  .sponsor-banner-1,
+  .sponsor-banner-2,
+  .contact-card::before,
+  .contact-card::after,
+  .circle-text {
+    animation-play-state: running;
+  }
+}
+
+/* Optimize for 60fps animations */
+.scroll-banner,
+.sponsor-banner,
+.sponsor-banner-1,
+.sponsor-banner-2 {
+  animation-timing-function: linear;
+}
+
+.contact-card::before,
+.contact-card::after {
+  animation-timing-function: ease-in-out;
+}
+
+/* Activities and Events Section */
+.activities-section {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.activities-heading {
+  font-family: 'Canicule Display', serif;
+  color: #E8DBCC;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1001;
+  transform: translateY(0);
+  transition: none;
+}
+
+/* Responsive design for activities section */
+@media (max-width: 768px) {
+  .activities-section {
+    width: 95%;
+    top: 40%;
+  }
+
+  .activities-heading {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .activities-section {
+    width: 98%;
+    top: 40%;
+  }
+
+  .activities-heading {
+    transform: translateY(0);
+  }
+
+  .social-media-section {
+    bottom: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .social-links {
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+  }
+}
+
+/* Wanna Connect Text - Desktop */
+.wanna-connect-text.desktop-only {
+  position: absolute;
+  left: 50%;
+  top: 87%;
+  transform: translateX(-50%);
+  font-family: 'Canicule', serif;
+  color: #5C0023;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  z-index: 1000;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+/* Wanna Connect Text - Mobile */
+.wanna-connect-text.mobile-only {
+  position: absolute;
+  left: 60%;
+  top: 91.5%;
+  width: 100%;
+  transform: translateX(-50%);
+  font-family: 'Canicule', serif;
+  color: #5C0023;
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  z-index: 1000;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+/* Contact Buttons - Desktop */
+.contact-buttons.desktop-only {
+  position: absolute;
+  left: 50%;
+  top: 89%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 2vw, 1rem);
+  align-items: center;
+  z-index: 1000;
+}
+
+.contact-buttons.desktop-only .contact-button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Contact Buttons - Mobile */
+.contact-buttons.mobile-only {
+  position: absolute;
+  left: 60%;
+  top: 93%;
+  transform: translateX(-50%);
+  display: none;
+  flex-direction: column;
+  gap: clamp(0.1rem, 1vw, 1.5rem);
+  align-items: center;
+  z-index: 1000;
+}
+
+.contact-buttons.mobile-only .contact-button {
+  width: 100%;
+  box-sizing: border-box;
+  padding: clamp(0.4rem, 1.5vw, 0.8rem) clamp(0.8rem, 3vw, 1.5rem);
+  font-size: clamp(0.8rem, 2.2vw, 1.1rem);
+}
+
+.contact-buttons.mobile-only .button-subtext {
+  font-size: clamp(0.5rem, 1.2vw, 0.7rem);
+  margin-top: clamp(0.1rem, 0.3vw, 0.3rem);
+}
+
+.contact-button {
+  display: inline-block;
+  padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 4vw, 2rem);
+  background: linear-gradient(135deg, rgba(232, 219, 204, 0.9) 0%, rgba(245, 245, 220, 0.8) 100%);
+  color: #5C0023;
+  text-decoration: none;
+  border-radius: clamp(8px, 2vw, 20px);
+  font-family: 'Racama', serif;
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  font-weight: 600;
+  text-align: center;
+  border: 2px solid rgba(92, 0, 35, 0.2);
+  box-shadow: 0 4px 15px rgba(92, 0, 35, 0.1);
+  transition: all 0.3s ease;
+}
+
+.button-subtext {
+  font-size: clamp(0.6rem, 1.5vw, 0.8rem);
+  font-weight: 400;
+  font-style: italic;
+  color: #5C0023;
+  opacity: 0.7;
+  text-align: center;
+  line-height: 1.2;
+  margin-top: clamp(0.2rem, 0.5vw, 0.4rem);
+  white-space: nowrap;
+}
+
+.contact-button:hover {
+  background: linear-gradient(135deg, rgba(92, 0, 35, 0.1) 0%, rgba(232, 219, 204, 0.9) 100%);
+  border-color: rgba(92, 0, 35, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(92, 0, 35, 0.2);
+}
+
+.call-button {
+  background: linear-gradient(135deg, rgba(92, 0, 35, 0.1) 0%, rgba(232, 219, 204, 0.9) 100%);
+}
+
+.email-button {
+  background: linear-gradient(135deg, rgba(232, 219, 204, 0.9) 0%, rgba(245, 245, 220, 0.8) 100%);
+}
+
+/* Previous Edition Link */
+.previous-edition-link {
+  font-family: 'Racama', serif;
+  font-size: clamp(0.6rem, 1.8vw, 1.5rem);
+  color: #5C0023;
+  text-decoration: none;
+  opacity: 0.8;
+  text-align: center;
+  margin-top: clamp(0.3rem, 1.2vw, 0.5rem);
+  transition: all 0.3s ease;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.previous-edition-link:hover {
+  opacity: 1;
+  color: #5C0023;
+  text-decoration: underline;
+  transform: translateY(-1px);
+}
+
+/* Mobile responsiveness for wanna connect text and buttons */
+@media (max-width: 768px) {
+  .wanna-connect-text.desktop-only {
+    display: none;
+  }
+
+  .wanna-connect-text.mobile-only {
+    display: block;
+  }
+
+  .contact-buttons.desktop-only {
+    display: none;
+  }
+
+  .contact-buttons.mobile-only {
+    display: flex;
+  }
+}
+
+/* Responsive positioning for smaller mobile screens */
+@media (max-width: 600px) {
+  .wanna-connect-text.mobile-only {
+    top: 91%;
+  }
+
+  .contact-buttons.mobile-only {
+    top: 91.5%;
+    transform: translateX(-50%) scale(0.95);
+  }
+
+  .contact-buttons.mobile-only .contact-button {
+    padding: clamp(0.3rem, 1.2vw, 0.6rem) clamp(0.6rem, 2.5vw, 1.2rem);
+    font-size: clamp(0.7rem, 2vw, 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .wanna-connect-text.mobile-only {
+    top: 88.5%;
+  }
+
+  .contact-buttons.mobile-only {
+    top: 90%;
+    transform: translateX(-50%) scale(0.85);
+  }
+
+  .contact-buttons.mobile-only .contact-button {
+    padding: clamp(0.25rem, 1vw, 0.5rem) clamp(0.5rem, 2vw, 1rem);
+    font-size: clamp(0.6rem, 1.8vw, 0.9rem);
+  }
+}
+
+@media (max-width: 360px) {
+  .wanna-connect-text.mobile-only {
+    top: 87%;
+  }
+
+  .contact-buttons.mobile-only {
+    top: 88.5%;
+    transform: translateX(-50%) scale(0.75);
+  }
+
+  .contact-buttons.mobile-only .contact-button {
+    padding: clamp(0.2rem, 0.8vw, 0.4rem) clamp(0.4rem, 1.5vw, 0.8rem);
+    font-size: clamp(0.5rem, 1.5vw, 0.8rem);
+  }
+}
+
+@media (max-width: 700px),
+(max-aspect-ratio: 2/3),
+(orientation: portrait) {
+  .wanna-connect-text.desktop-only {
+    display: none;
+  }
+
+  .wanna-connect-text.mobile-only {
+    display: block;
+    top: 91%;
+  }
+
+  .contact-buttons.desktop-only {
+    display: none;
+  }
+
+  .contact-buttons.mobile-only {
+    display: flex;
+    top: 92.5%;
+    transform: translateX(-50%) scale(0.98);
+  }
+
+  .contact-buttons.mobile-only .contact-button {
+    padding: clamp(0.35rem, 1.5vw, 0.7rem) clamp(0.7rem, 3vw, 1.3rem);
+    font-size: clamp(0.75rem, 2.2vw, 1.1rem);
+  }
+}
+
+/* Mobile responsiveness for sponsors */
+@media (max-width: 1024px) {
+  .sponsors-grid {
+    grid-template-columns: repeat(auto-fit, minmax(clamp(90px, 10vw, 180px), 1fr));
+    gap: clamp(0.7rem, 2vw, 1.8rem);
+  }
+
+  .sponsor-item {
+    height: clamp(65px, 10vw, 150px);
+  }
+}
+
+@media (max-width: 768px) {
+  .previous-sponsors-section {
+    top: 52%;
+    width: clamp(280px, 95%, 1000px);
+    padding: clamp(0.8rem, 2.5vw, 1.5rem);
+  }
+
+  .sponsors-heading {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    top: 47%;
+  }
+
+  .sponsors-grid {
+    grid-template-columns: repeat(auto-fit, minmax(clamp(80px, 15vw, 130px), 1fr));
+    gap: clamp(0.6rem, 2vw, 1.2rem);
+  }
+
+  .sponsor-item {
+    height: clamp(60px, 12vw, 120px);
+  }
+}
+
+@media (max-width: 480px) {
+  .sponsors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(0.5rem, 1.5vw, 0.8rem);
+  }
+
+  .sponsor-item {
+    height: clamp(50px, 10vw, 100px);
+  }
+}
+
+@media (max-width: 360px) {
+  .sponsors-grid {
+    gap: clamp(0.4rem, 1.2vw, 0.6rem);
+  }
+
+  .sponsor-item {
+    height: clamp(45px, 8vw, 90px);
+  }
+}
+
+
+/* Ensure mobile overrides take precedence over base decorative positions */
+@media (max-width: 700px),
+(max-aspect-ratio: 2/3),
+(orientation: portrait) {
+  .hackathon-subtitle {
+    font-size: clamp(1.6rem, 7vw, 8rem) !important;
+    top: 10.5% ;
+  }
+
+  .festival-quote {
+    left: 4% ;
+    top: 46% ;
+    font-size: clamp(1.1rem, 5vw, 1.8rem) !important;
+    max-width: 92% !important;
+  }
+
+  .about-text {
+    left: 6% !important;
+    top: 50% !important;
+    max-width: 88% !important;
+    font-size: clamp(0.6rem, 2.7vw, 4rem) !important;
+  }
+
+
+  .sponsors-heading {
+    font-size: clamp(1.5rem, 5vw, 2.5rem) !important;
+    top: 71.5% !important;
+    left: 40% !important;
+    transform: translateX(-30%) !important;
+    text-align: center !important;
+    position: absolute !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .previous-sponsors-section {
+    top: 73% !important;
+    left: 50% !important;
+    transform: translateX(-50%) scale(0.9) !important;
+    transform-origin: top center !important;
+    width: clamp(260px, 85%, 900px) !important;
+    padding: clamp(0.6rem, 3vw, 1.2rem) !important;
+    position: absolute !important;
+    text-align: center !important;
+    margin: 0 !important;
+  }
+
+  .sponsors-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: clamp(0.08rem, 1.2vw, 0.6rem) !important;
+  }
+
+  .sponsor-item {
+    height: clamp(10px, 8vw, 44px) !important;
+  }
+
+  .sponsor-logo {
+    max-width: clamp(65%, 5.5vw, 80%) !important;
+    max-height: clamp(65%, 5.5vw, 80%) !important;
+  }
+
+  .brochure-section {
+    top: 88.5% !important;
+    transform: translateX(-50%) scale(0.6) !important;
+  }
+
+  .brochure-button {
+    padding: 0.5rem 1rem !important;
+    font-size: clamp(0.8rem, 3.5vw, 1.2rem) !important;
+    white-space: nowrap !important;
+  }
+
+  .knock-knock-text {
+    top: 94.3% !important;
+    left: -3% !important;
+    transform: translateY(-50%) rotate(-90deg) !important;
+    transform-origin: center !important;
+    font-size: clamp(1rem, 6vw, 8rem) !important;
+    writing-mode: horizontal-tb !important;
+    white-space: normal !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+  }
+
+  .knock-knock-text::before {
+    content: "Knock Knock\A It is Us!" !important;
+    white-space: pre !important;
+  }
+
+  .knock-knock-text {
+    font-size: 0 !important;
+  }
+
+  .knock-knock-text::before {
+    font-size: clamp(1rem, 6vw, 8rem) !important;
+  }
+
+  .contact-section {
+    display: none !important;
+  }
+
+
+  .social-media-section {
+    top: 98.5% !important;
+    bottom: clamp(1.5rem, 4vw, 3rem) !important;
+    transform: translateX(-50%) scale(0.7) !important;
+
+  }
+
+  /* Mobile overrides for "Wanna Sponsor US" intersecting banners */
+  .sponsor-banner {
+    left: 50% !important;
+    top: 82% !important;
+    width: 100vw !important;
+    height: clamp(20px, 6vw, 36px) !important;
+  }
+
+  .sponsor-banner-1 {
+    top: 88% !important;
+    height: clamp(20px, 6vw, 36px) !important;
+
+  }
+
+  .sponsor-banner-2 {
+    top: 88% !important;
+    height: clamp(20px, 6vw, 36px) !important;
+  }
+}
+
+/* Mobile override for Tracks & Prizes scrolling banner */
+@media (max-width: 700px),
+(max-aspect-ratio: 2/3),
+(orientation: portrait) {
+  .scroll-banner {
+    top: 68% !important;
+    height: clamp(16px, 5vw, 28px) !important;
+    animation-duration: 16s !important;
+  }
+
+  /* MAT logo override */
+  .mat-logo {
+    left: 6% !important;
+    top: 1.5% !important;
+    width: clamp(100px, 50vw, 4000px) !important;
+    height: auto !important;
+  }
+}
+
+/* Text version of scroll banner */
+.scroll-banner-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 47%;
+  height: clamp(28px, 5vw, 50px);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: bannerScroll 20s linear infinite;
+  opacity: 0.9;
+}
+
+.banner-text {
+  display: inline-block;
+  font-family: 'Canicule', serif;
+  font-size: clamp(1.2rem, 3vw, 2.2rem);
+  font-weight: 600;
+  color: #5C0023;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  padding-right: 2em;
+  animation: textScroll 20s linear infinite;
+}

@@ -1,0 +1,43 @@
+/* Custom Font Imports */
+
+@font-face {
+  font-family: 'Swistblnk Moalang Melintang';
+  src: url('../assets/fonts/Swistblnk Moalang Melintang.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PlaylistScript';
+  src: url('../assets/fonts/PlaylistScript.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Magz';
+  src: url('../assets/fonts/Magz.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Owned';
+  src: url('../assets/fonts/owned.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Racama';
+  src: url('../assets/fonts/Racama.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'YesevaOne';
+  src: url('../assets/fonts/YesevaOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
