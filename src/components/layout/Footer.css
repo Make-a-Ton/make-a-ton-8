@@ -1,0 +1,263 @@
+.footer-wrapper {
+  width: 100%;
+  background-color: #efe2d2;
+  color: #5C0023;
+  overflow: hidden;
+}
+
+/* ===== MAIN HEADING ===== */
+
+.footer-main-heading {
+  text-align: center;
+  padding: clamp(0.5rem, 2vw, 2.5rem) 0;
+  margin-bottom: clamp(0.3rem, 1vw, 0.7rem);
+}
+
+.knock-knock-main-heading {
+  font-family: "Yeseva One", serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: #5C0023;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== TOP AREA ===== */
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+/* ===== FAQ AREA ===== */
+
+.footer-faq-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.faq-section-heading {
+  font-family: "Yeseva One", serif;
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  color: #5C0023;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+/* FAQ Overrides inside footer */
+
+.footer-faq-area .faq-container {
+  width: 100%;
+  max-width: 100%;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.footer-faq-area .faq-item {
+  background: rgba(92, 0, 35, 0.05);
+  border: 1px solid rgba(92, 0, 35, 0.1);
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.footer-faq-area .faq-item:hover {
+  background: rgba(92, 0, 35, 0.08);
+  border-color: rgba(92, 0, 35, 0.2);
+}
+
+.footer-faq-area .faq-item.active {
+  background: rgba(92, 0, 35, 0.1);
+  border-color: rgba(92, 0, 35, 0.3);
+}
+
+.footer-faq-area .faq-question {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Canicule', serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #5C0023;
+}
+
+.footer-faq-area .faq-toggle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #5C0023;
+  transition: transform 0.3s ease;
+}
+
+.footer-faq-area .faq-item.active .faq-toggle {
+  transform: rotate(180deg);
+}
+
+.footer-faq-area .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: rgba(232, 219, 204, 0.3);
+}
+
+.footer-faq-area .faq-answer.open {
+  max-height: 200px;
+}
+
+.footer-faq-area .faq-answer p {
+  margin: 0;
+  padding: 1rem;
+  font-family: 'Canicule', serif;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #5C0023;
+}
+
+/* ===== CONTACT AREA ===== */
+
+.footer-contact-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Override absolute positioning from ContactSection */
+
+.footer-contact-area .knock-knock-text,
+.footer-contact-area .wanna-connect-text,
+.contact-section,
+.contact-buttons.desktop-only,
+.contact-buttons.mobile-only {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  transform: none !important;
+}
+
+/* ===== BOTTOM BAND ===== */
+
+.footer-bottom {
+  background-color: #5C0023;
+  padding: 1.5rem clamp(1.5rem, 4vw, 3rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Brand (left on desktop) */
+.footer-brand {
+  display: flex;
+  gap: 2rem;
+  font-family: "Yeseva One", serif;
+  font-size: 1.2rem;
+  color: #E8DBCC;
+  letter-spacing: 0.04em;
+}
+
+/* ===== SOCIAL LINKS (Themed) ===== */
+
+.social-media-sections {
+  display: flex;
+  align-items: center;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.social-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1.5px solid rgba(232, 219, 204, 0.7);
+  text-decoration: none;
+  color: #E8DBCC;
+  transition: all 0.25s ease;
+}
+
+.social-link:hover {
+  background: rgba(232, 219, 204, 0.15);
+  border-color: #E8DBCC;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
+  color: #E8DBCC;
+  fill: #E8DBCC;
+  transition: transform 0.25s ease;
+}
+
+.social-link:hover .social-icon {
+  transform: scale(1.1);
+}
+
+/* ===== RESPONSIVE: MOBILE ===== */
+
+@media (max-width: 900px) {
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 4vw, 2rem);
+    padding: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .faq-section-heading {
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .footer-brand {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .social-media-section {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .knock-knock-main-heading {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+}
+
+/* Hide social icons only on very small screens */
+@media (max-width: 600px) {
+  .social-media-section {
+    display: none;
+  }
+}
+
+/* ===== DESKTOP ONLY ===== */
+
+@media (min-width: 901px) {
+  .social-media-section {
+    justify-content: flex-end;
+  }
+}

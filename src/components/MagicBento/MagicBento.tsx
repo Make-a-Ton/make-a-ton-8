@@ -18,19 +18,22 @@ const cardData: CardData[] = [
   {
     color: "rgba(92, 0, 35, 0.9)",
     title: "Tech Workshop",
-    description: "Learn cutting-edge development techniques and collaborate on real-world projects",
+    description:
+      "Learn cutting-edge development techniques and collaborate on real-world projects",
     label: "Learning",
   },
   {
     color: "rgba(92, 0, 35, 0.9)",
     title: "24-Hour Hackathon",
-    description: "Build innovative solutions in just 24 hours and showcase your creativity",
+    description:
+      "Build innovative solutions in just 24 hours and showcase your creativity",
     label: "Innovation",
   },
   {
     color: "rgba(92, 0, 35, 0.9)",
     title: "Networking Mixer",
-    description: "Connect with industry professionals and discover new opportunities",
+    description:
+      "Connect with industry professionals and discover new opportunities",
     label: "Connect",
   },
   {
@@ -42,7 +45,8 @@ const cardData: CardData[] = [
   {
     color: "rgba(92, 0, 35, 0.9)",
     title: "Mentorship",
-    description: "Get guidance from experienced developers and industry experts",
+    description:
+      "Get guidance from experienced developers and industry experts",
     label: "Growth",
   },
   {
@@ -56,7 +60,7 @@ const cardData: CardData[] = [
 const createParticleElement = (
   x: number,
   y: number,
-  color: string = DEFAULT_GLOW_COLOR
+  color: string = DEFAULT_GLOW_COLOR,
 ): HTMLDivElement => {
   const el = document.createElement("div");
   el.className = "particle";
@@ -85,7 +89,7 @@ const updateCardGlowProperties = (
   mouseX: number,
   mouseY: number,
   glow: number,
-  radius: number
+  radius: number,
 ): void => {
   const rect = card.getBoundingClientRect();
   const relativeX = ((mouseX - rect.left) / rect.width) * 100;
@@ -136,8 +140,8 @@ const ParticleCard: React.FC<ParticleCardProps> = ({
       createParticleElement(
         Math.random() * width,
         Math.random() * height,
-        glowColor
-      )
+        glowColor,
+      ),
     );
     particlesInitialized.current = true;
   }, [particleCount, glowColor]);
@@ -171,7 +175,7 @@ const ParticleCard: React.FC<ParticleCardProps> = ({
     }
 
     memoizedParticles.current.forEach((particle, index) => {
-      const timeoutId = setTimeout(() => {
+      const timeoutId = window.setTimeout(() => {
         if (!isHoveredRef.current || !cardRef.current) return;
 
         const clone = particle.cloneNode(true) as HTMLDivElement;
@@ -181,7 +185,7 @@ const ParticleCard: React.FC<ParticleCardProps> = ({
         gsap.fromTo(
           clone,
           { scale: 0, opacity: 0 },
-          { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(1.7)" }
+          { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(1.7)" },
         );
 
         gsap.to(clone, {
@@ -296,7 +300,7 @@ const ParticleCard: React.FC<ParticleCardProps> = ({
         Math.hypot(x, y),
         Math.hypot(x - rect.width, y),
         Math.hypot(x, y - rect.height),
-        Math.hypot(x - rect.width, y - rect.height)
+        Math.hypot(x - rect.width, y - rect.height),
       );
 
       const ripple = document.createElement("div");
@@ -326,7 +330,7 @@ const ParticleCard: React.FC<ParticleCardProps> = ({
           duration: 0.8,
           ease: "power2.out",
           onComplete: () => ripple.remove(),
-        }
+        },
       );
     };
 
@@ -465,7 +469,7 @@ const GlobalSpotlight: React.FC<GlobalSpotlightProps> = ({
           e.clientX,
           e.clientY,
           glowIntensity,
-          spotlightRadius
+          spotlightRadius,
         );
       });
 
@@ -522,10 +526,7 @@ interface BentoCardGridProps {
   gridRef: React.RefObject<HTMLDivElement | null>;
 }
 
-const BentoCardGrid: React.FC<BentoCardGridProps> = ({
-  children,
-  gridRef
-}) => (
+const BentoCardGrid: React.FC<BentoCardGridProps> = ({ children, gridRef }) => (
   <div className="card-grid bento-section" ref={gridRef}>
     {children}
   </div>
@@ -598,7 +599,7 @@ const MagicBento: React.FC<MagicBentoProps> = ({
             style: {
               backgroundColor: card.color,
               "--glow-color": glowColor,
-            }
+            },
           };
 
           if (enableStars) {
@@ -697,7 +698,7 @@ const MagicBento: React.FC<MagicBentoProps> = ({
                     Math.hypot(x, y),
                     Math.hypot(x - rect.width, y),
                     Math.hypot(x, y - rect.height),
-                    Math.hypot(x - rect.width, y - rect.height)
+                    Math.hypot(x - rect.width, y - rect.height),
                   );
 
                   const ripple = document.createElement("div");
@@ -727,7 +728,7 @@ const MagicBento: React.FC<MagicBentoProps> = ({
                       duration: 0.8,
                       ease: "power2.out",
                       onComplete: () => ripple.remove(),
-                    }
+                    },
                   );
                 };
 
@@ -751,4 +752,4 @@ const MagicBento: React.FC<MagicBentoProps> = ({
   );
 };
 
-export default MagicBento; 
+export default MagicBento;

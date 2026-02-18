@@ -1,9 +1,9 @@
 export default function SocialLinks() {
   return (
-    <div className="social-media-section">
+    <div className="social-media-sections">
       <div className="social-links">
         <a 
-          href="https://instagram.com/makeaton.cusat" 
+          href="https://instagram.com/makeaton.in" 
           target="_blank" 
           rel="noopener noreferrer"
           className="social-link"

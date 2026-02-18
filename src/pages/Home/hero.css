@@ -42,8 +42,8 @@
 
 /* Subtitle */
 .hackathon-subtitle {
-  font-family: 'PlaylistScript', cursive;
-  color: #E8DBCC;
+  font-family: "PlaylistScript", cursive;
+  color: #e8dbcc;
   font-size: clamp(0.5rem, 3vw, 3rem);
   font-weight: normal;
   position: absolute;
@@ -60,14 +60,16 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #E8DBCC 0%, #F5F5DC 100%);
-  color: #5C0023;
-  font-family: 'YesevaOne', serif;
+  background: linear-gradient(135deg, #e8dbcc 0%, #f5f5dc 100%);
+  color: #5c0023;
+  font-family: "YesevaOne", serif;
   font-weight: bold;
   text-decoration: none;
   border-radius: 50px;
   border: 2px solid rgba(92, 0, 35, 0.2);
-  box-shadow: 0 8px 30px rgba(92, 0, 35, 0.25), 0 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow:
+    0 8px 30px rgba(92, 0, 35, 0.25),
+    0 4px 15px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   transition: all 0.3s ease;
   letter-spacing: 0.02em;
@@ -78,8 +80,10 @@
 
 .register-button:hover {
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 12px 40px rgba(92, 0, 35, 0.35), 0 6px 20px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(135deg, #F5F5DC 0%, #fff 100%);
+  box-shadow:
+    0 12px 40px rgba(92, 0, 35, 0.35),
+    0 6px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #f5f5dc 0%, #fff 100%);
   border-color: rgba(92, 0, 35, 0.4);
 }
 
@@ -90,11 +94,11 @@
 /* Registration Deadline */
 .registration-deadline {
   position: relative;
-  font-family: 'YesevaOne', serif;
+  font-family: "YesevaOne", serif;
   font-size: clamp(1rem, 2vw, 2rem);
   letter-spacing: 0.02em;
   margin: 0;
-  color: #E8DBCC;
+  color: #e8dbcc;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   cursor: default;
 }
@@ -110,23 +114,38 @@
   position: absolute;
   left: 0;
   top: 0;
-  font-family: 'YesevaOne', serif;
+  font-family: "YesevaOne", serif;
   font-size: clamp(1rem, 2vw, 2rem);
   letter-spacing: 0.02em;
   margin: 0;
-  color: #FFD700;
-  text-shadow: 0 0 8px rgba(255, 215, 0, 0.6), 0 0 15px rgba(255, 215, 0, 0.4), 0 0 25px rgba(255, 215, 0, 0.2);
+  color: #ffd700;
+  text-shadow:
+    0 0 8px rgba(255, 215, 0, 0.6),
+    0 0 15px rgba(255, 215, 0, 0.4),
+    0 0 25px rgba(255, 215, 0, 0.2);
   pointer-events: none;
-  -webkit-mask-image: radial-gradient(circle 80px at var(--mouse-x, -100px) var(--mouse-y, -100px),
-      rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 25%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 70%, transparent 100%);
-  mask-image: radial-gradient(circle 80px at var(--mouse-x, -100px) var(--mouse-y, -100px),
-      rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 25%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(
+    circle 80px at var(--mouse-x, -100px) var(--mouse-y, -100px),
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8) 25%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.1) 70%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    circle 80px at var(--mouse-x, -100px) var(--mouse-y, -100px),
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8) 25%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.1) 70%,
+    transparent 100%
+  );
 }
 
 /* Festival Quote */
 .festival-quote {
-  font-family: 'YesevaOne', serif;
-  color: #5C0023;
+  font-family: "YesevaOne", serif;
+  color: #5c0023;
   font-size: clamp(1.3rem, 4.2vw, 5.5rem);
   font-weight: normal;
   position: absolute;
@@ -139,15 +158,15 @@
 
 /* Text Styling Variants */
 .hackathon-text {
-  font-family: 'Magz', serif;
-  color: #5C0023;
+  font-family: "Magz", serif;
+  color: #5c0023;
   font-weight: bold;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .festival-text {
-  font-family: 'PlaylistScript', cursive;
-  color: #5C0023;
+  font-family: "PlaylistScript", cursive;
+  color: #5c0023;
   font-weight: 400;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   letter-spacing: 0.05em;
@@ -160,7 +179,7 @@
   animation: fontCycle 4s ease-in-out infinite;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  color: #5C0023;
+  color: #5c0023;
 }
 
 .hackathon-word {
@@ -171,13 +190,13 @@
 }
 
 .hackathon-word::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('../assets/brushstroke.png');
+  background-image: url("../assets/brushstroke.png");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -186,53 +205,93 @@
 }
 
 /* Modifier classes: desktop & mobile variants */
-.mat-logo--desktop { display: block; }
-.mat-logo--mobile { display: none; }
-.hackathon-subtitle--desktop { display: block; }
-.hackathon-subtitle--mobile { display: none; }
-.register-button--desktop { display: inline-flex; }
-.register-button--mobile { display: none; }
-.registration-deadline-wrapper--desktop { display: inline-block; }
-.registration-deadline-wrapper--mobile { display: none; }
-.festival-quote--desktop { display: block; }
-.festival-quote--mobile { display: none; }
+.mat-logo--desktop {
+  display: block;
+}
+.mat-logo--mobile {
+  display: none;
+}
+.hackathon-subtitle--desktop {
+  display: block;
+}
+.hackathon-subtitle--mobile {
+  display: none;
+}
+.register-button--desktop {
+  display: inline-flex;
+}
+.register-button--mobile {
+  display: none;
+}
+.registration-deadline-wrapper--desktop {
+  display: inline-block;
+}
+.registration-deadline-wrapper--mobile {
+  display: none;
+}
+.festival-quote--desktop {
+  display: block;
+}
+.festival-quote--mobile {
+  display: none;
+}
 
 /* ========== DESKTOP / LARGE SCREENS (min-width: 769px) ========== */
 @media (min-width: 800px) {
-  .mat-logo--desktop { display: block; }
-  .mat-logo--mobile { display: none; }
+  .mat-logo--desktop {
+    display: block;
+  }
+  .mat-logo--mobile {
+    display: none;
+  }
   .mat-logo {
     left: 6%;
     top: 2%;
-    width: clamp(170px, 48vw, 400px) !important; 
+    width: clamp(170px, 48vw, 400px) !important;
   }
 
-  .hackathon-subtitle--desktop { display: block; }
-  .hackathon-subtitle--mobile { display: none; }
+  .hackathon-subtitle--desktop {
+    display: block;
+  }
+  .hackathon-subtitle--mobile {
+    display: none;
+  }
   .hackathon-subtitle {
     left: 6% !important;
     top: 19% !important;
     max-width: 80% !important;
   }
 
-  .register-button--desktop { display: inline-flex; }
-  .register-button--mobile { display: none; }
+  .register-button--desktop {
+    display: inline-flex;
+  }
+  .register-button--mobile {
+    display: none;
+  }
   .register-button {
     left: 6% !important;
     top: 23% !important;
     max-width: 90% !important;
   }
 
-  .registration-deadline-wrapper--desktop { display: inline-block; }
-  .registration-deadline-wrapper--mobile { display: none; }
+  .registration-deadline-wrapper--desktop {
+    display: inline-block;
+  }
+  .registration-deadline-wrapper--mobile {
+    display: none;
+  }
   .registration-deadline-wrapper {
     left: 6% !important;
     top: 27% !important;
     max-width: 80% !important;
   }
 
-  .festival-quote--desktop { display: block; }
-  .festival-quote--mobile { display: none; }
+  .festival-quote--desktop {
+    display: block;
+  }
+  .festival-quote--mobile {
+    display: none;
+  }
   .festival-quote {
     left: 6% !important;
     top: 59% !important;
@@ -242,16 +301,24 @@
 
 /* ========== MOBILE / SMALL SCREENS (min-width: 701px and max-width: 768px) ========== */
 @media (min-width: 701px) and (max-width: 800px) {
-  .mat-logo--desktop { display: none; }
-  .mat-logo--mobile { display: block; }
+  .mat-logo--desktop {
+    display: none;
+  }
+  .mat-logo--mobile {
+    display: block;
+  }
   .mat-logo {
     left: 5% !important;
     top: 2% !important;
     width: clamp(100px, 40vw, 200px) !important;
   }
 
-  .hackathon-subtitle--desktop { display: none; }
-  .hackathon-subtitle--mobile { display: block; }
+  .hackathon-subtitle--desktop {
+    display: none;
+  }
+  .hackathon-subtitle--mobile {
+    display: block;
+  }
   .hackathon-subtitle {
     left: 5% !important;
     top: 18% !important;
@@ -259,13 +326,17 @@
     max-width: 85% !important;
   }
 
-  .register-button--desktop { display: none; }
-  .register-button--mobile { display: inline-flex; }
+  .register-button--desktop {
+    display: none;
+  }
+  .register-button--mobile {
+    display: inline-flex;
+  }
   .register-button {
     left: 5% !important;
     top: 22% !important;
     padding: clamp(0.4rem, 1.2vw, 0.8rem) clamp(0.8rem, 2vw, 1.5rem) !important;
-    font-size: clamp(1.0rem, 2vw, 1rem) !important;
+    font-size: clamp(1rem, 2vw, 1rem) !important;
     transform: none !important;
     max-width: 90% !important;
   }
@@ -274,8 +345,12 @@
     transform: translateY(-3px) scale(1.02) !important;
   }
 
-  .registration-deadline-wrapper--desktop { display: none; }
-  .registration-deadline-wrapper--mobile { display: inline-block; }
+  .registration-deadline-wrapper--desktop {
+    display: none;
+  }
+  .registration-deadline-wrapper--mobile {
+    display: inline-block;
+  }
   .registration-deadline-wrapper {
     left: 5% !important;
     top: 27% !important;
@@ -283,19 +358,33 @@
   }
 
   .registration-deadline {
-    font-size: clamp(1.0rem, 1.8vw, 0.85rem) !important;
+    font-size: clamp(1rem, 1.8vw, 0.85rem) !important;
   }
 
   .registration-deadline-glow-text {
-    font-size: clamp(0.6rem, 1.8vw, 1.0rem) !important;
-    -webkit-mask-image: radial-gradient(circle 40px at var(--mouse-x, -100px) var(--mouse-y, -100px),
-        rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0.2) 60%, transparent 100%) !important;
-    mask-image: radial-gradient(circle 40px at var(--mouse-x, -100px) var(--mouse-y, -100px),
-        rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0.2) 60%, transparent 100%) !important;
+    font-size: clamp(0.6rem, 1.8vw, 1rem) !important;
+    -webkit-mask-image: radial-gradient(
+      circle 40px at var(--mouse-x, -100px) var(--mouse-y, -100px),
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.6) 30%,
+      rgba(0, 0, 0, 0.2) 60%,
+      transparent 100%
+    ) !important;
+    mask-image: radial-gradient(
+      circle 40px at var(--mouse-x, -100px) var(--mouse-y, -100px),
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.6) 30%,
+      rgba(0, 0, 0, 0.2) 60%,
+      transparent 100%
+    ) !important;
   }
 
-  .festival-quote--desktop { display: none; }
-  .festival-quote--mobile { display: block; }
+  .festival-quote--desktop {
+    display: none;
+  }
+  .festival-quote--mobile {
+    display: block;
+  }
   .festival-quote {
     left: 5% !important;
     top: 58% !important;
@@ -304,23 +393,23 @@
     width: auto !important;
   }
 
-/* High-specificity overrides for extra-narrow screens
+  /* High-specificity overrides for extra-narrow screens
    These beat rules in responsive.css / App.css without editing those files */
-@media (max-width: 700px) {
-  body .hackathon-subtitle {
-    left: 5% !important;
-    top: 20% !important;
-    font-size: clamp(0.55rem, 3vw, 1rem) !important;
-    max-width: 80% !important;
-  }
+  @media (max-width: 700px) {
+    body .hackathon-subtitle {
+      left: 5% !important;
+      top: 20% !important;
+      font-size: clamp(0.55rem, 3vw, 1rem) !important;
+      max-width: 80% !important;
+    }
 
-  body .festival-quote {
-    left: 5% !important;
-    top: 66% !important;
-    font-size: clamp(1.5rem, 3vw, 1.5rem) !important;
-    max-width: 90% !important;
+    body .festival-quote {
+      left: 5% !important;
+      top: 66% !important;
+      font-size: clamp(1.5rem, 3vw, 1.5rem) !important;
+      max-width: 90% !important;
+    }
   }
-}
 }
 
 /* ========== EXTRA NARROW / PORTRAIT (max-width: 700px, 2/3 aspect ratio) ========== */

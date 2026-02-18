@@ -2,22 +2,21 @@
 /* All styles are imported from modular CSS files for better organization and maintainability */
 
 /* Core Imports */
-@import './styles/fonts.css';
-@import './styles/variables.css';
-@import './styles/animations.css';
+@import "./styles/fonts.css";
+@import "./styles/variables.css";
+@import "./styles/animations.css";
 
 /* Layout & Component Styles */
-@import './styles/navbar.css';
-@import './styles/background.css';
-@import './styles/hero.css';
-@import './styles/about.css';
-@import './styles/contact.css';
-@import './styles/social.css';
-@import './styles/decorative.css';
+@import "./components/layout/Navbar.css";
+@import "./styles/background.css";
+@import "./pages/Home/hero.css";
+@import "./pages/Home/About.css";
+@import "./styles/contact.css";
+@import "./styles/social.css";
+@import "./styles/decorative.css";
 
 /* Responsive Design */
-@import './styles/responsive.css';
-
+@import "./styles/responsive.css";
 
 /* ==============================================================================
    MAIN APPLICATION STYLES - MINIMAL ONLY
@@ -94,7 +93,6 @@
   }
 }
 
-
 .background-image {
   width: 100%;
   height: auto;
@@ -110,8 +108,8 @@
 }
 
 .make-a-ton-text {
-  font-family: 'Swistblnk Moalang Melintang', serif;
-  color: #E8DBCC;
+  font-family: "Swistblnk Moalang Melintang", serif;
+  color: #e8dbcc;
   font-size: clamp(2rem, 14vw, 14rem);
   font-weight: normal;
   position: absolute;
@@ -123,7 +121,6 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   line-height: 0.9;
 }
-
 
 @keyframes fadeUp {
   from {
@@ -137,36 +134,9 @@
   }
 }
 
-
 /* DUPLICATE: Moved to about.css - Line 151 */
-/*.scroll-banner {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 47%;
-  height: clamp(28px, 5vw, 50px);
-  background-image: url('../assets/Tracks and Prizes coming soon... Tracks and Prizes coming soon... Tracks and Prizes coming soon... Tracks and Prizes coming soon....png');
-  background-size: auto 100%;
-  background-repeat: repeat-x;
-  background-position: 0 50%;
-  animation: bannerScroll 20s linear infinite;
-  opacity: 0.9;
-  z-index: 1000;
-  filter: drop-shadow(0 2px 8px rgba(92, 0, 35, 0.2));
-  will-change: background-position;
-  transform: translateZ(0);
-}*/
 
 /* DUPLICATE: Moved to animations.css - Line 15 */
-/*@keyframes bannerScroll {
-  from {
-    background-position-x: 0;
-  }
-
-  to {
-    background-position-x: -1000px;
-  }
-}*/
 
 @keyframes textScroll {
   from {
@@ -179,61 +149,6 @@
 }
 
 /* DUPLICATE: Moved to variables.css and decorative.css */
-/*
-.sponsor-banner {
-  position: absolute;
-  left: 50%;
-  top: 77%;
-  width: 100vw;
-  height: clamp(32px, 6vw, 48px);
-  background-image: url('../assets/Wanna Sponsor US_ Wanna Sponsor Us_ Wanna Sponsor US_ Wanna Sponsor Us_.png');
-  background-size: auto 100%;
-  background-repeat: repeat-x;
-  background-position: 0 50%;
-  animation: sponsorScroll 18s linear infinite;
-  opacity: 0.95;
-  z-index: 1000;
-  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.3));
-  transform-origin: center center;
-  will-change: background-position, transform;
-  transform: translateZ(0);
-}
-
-.sponsor-banner-1 {
-  transform: translate(-50%, -50%) rotate(5deg) translateZ(0);
-  z-index: 1001;
-  animation: sponsorScroll 18s linear infinite;
-  will-change: background-position, transform;
-}
-
-.sponsor-banner-2 {
-  transform: translate(-50%, -50%) rotate(-5deg) translateZ(0);
-  z-index: 1000;
-  animation: sponsorScrollReverse 18s linear infinite;
-  will-change: background-position, transform;
-}
-
-@keyframes sponsorScroll {
-  from {
-    background-position-x: 0;
-  }
-
-  to {
-    background-position-x: -1000px;
-  }
-}
-
-@keyframes sponsorScrollReverse {
-  from {
-    background-position-x: -1000px;
-  }
-
-  to {
-    background-position-x: 0;
-  }
-}
-*/
-
 
 /* Knock Knock text */
 .knock-knock-text {
@@ -241,8 +156,8 @@
   left: 50%;
   top: 84%;
   transform: translateX(-50%);
-  font-family: 'Canicule Display', serif;
-  color: #5C0023;
+  font-family: "Canicule Display", serif;
+  color: #5c0023;
   font-size: clamp(2rem, 4.5vw, 8rem);
   font-weight: bold;
   text-align: center;
@@ -253,7 +168,6 @@
 }
 
 @keyframes sparkle {
-
   0%,
   100% {
     transform: scale(1) rotate(0deg);
@@ -267,18 +181,8 @@
 }
 
 /* DUPLICATE: Moved to animations.css */
-/*@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}*/
 
 @keyframes cardPulse {
-
   0%,
   100% {
     box-shadow:
@@ -296,31 +200,57 @@
 }
 
 @keyframes gradientShift {
-
   0%,
   100% {
     background:
-      linear-gradient(135deg, rgba(92, 0, 35, 0.1) 0%, transparent 30%, transparent 70%, rgba(92, 0, 35, 0.05) 100%),
+      linear-gradient(
+        135deg,
+        rgba(92, 0, 35, 0.1) 0%,
+        transparent 30%,
+        transparent 70%,
+        rgba(92, 0, 35, 0.05) 100%
+      ),
       radial-gradient(2px 2px at 20px 30px, rgba(92, 0, 35, 0.3), transparent),
-      radial-gradient(2px 2px at 40px 70px, rgba(232, 219, 204, 0.4), transparent),
+      radial-gradient(
+        2px 2px at 40px 70px,
+        rgba(232, 219, 204, 0.4),
+        transparent
+      ),
       radial-gradient(1px 1px at 90px 40px, rgba(92, 0, 35, 0.2), transparent),
-      radial-gradient(1px 1px at 130px 80px, rgba(232, 219, 204, 0.3), transparent),
+      radial-gradient(
+        1px 1px at 130px 80px,
+        rgba(232, 219, 204, 0.3),
+        transparent
+      ),
       radial-gradient(2px 2px at 160px 30px, rgba(92, 0, 35, 0.25), transparent);
   }
 
   50% {
     background:
-      linear-gradient(135deg, rgba(92, 0, 35, 0.15) 0%, transparent 20%, transparent 80%, rgba(92, 0, 35, 0.08) 100%),
+      linear-gradient(
+        135deg,
+        rgba(92, 0, 35, 0.15) 0%,
+        transparent 20%,
+        transparent 80%,
+        rgba(92, 0, 35, 0.08) 100%
+      ),
       radial-gradient(2px 2px at 30px 40px, rgba(92, 0, 35, 0.4), transparent),
-      radial-gradient(2px 2px at 60px 80px, rgba(232, 219, 204, 0.5), transparent),
+      radial-gradient(
+        2px 2px at 60px 80px,
+        rgba(232, 219, 204, 0.5),
+        transparent
+      ),
       radial-gradient(1px 1px at 100px 50px, rgba(92, 0, 35, 0.3), transparent),
-      radial-gradient(1px 1px at 140px 90px, rgba(232, 219, 204, 0.4), transparent),
+      radial-gradient(
+        1px 1px at 140px 90px,
+        rgba(232, 219, 204, 0.4),
+        transparent
+      ),
       radial-gradient(2px 2px at 170px 40px, rgba(92, 0, 35, 0.35), transparent);
   }
 }
 
 @keyframes float {
-
   0%,
   100% {
     transform: translateY(0px) translateX(0px);
@@ -344,7 +274,6 @@
 }
 
 @keyframes wave {
-
   0%,
   100% {
     transform: translateX(0px) scale(1);
@@ -368,7 +297,6 @@
 }
 
 @keyframes bounce {
-
   0%,
   20%,
   50%,
@@ -386,58 +314,20 @@
   }
 }
 
-/* DUPLICATE: Moved to about.css and responsive.css */
-/*@media (max-width: 768px) {
-  .scroll-banner {
-    top: 58%;
-    height: clamp(24px, 7vw, 36px);
-    animation-duration: 16s;
-  }
-
-  .sponsor-banner-1 {
-    height: clamp(28px, 8vw, 42px);
-    animation-duration: 15s;
-  }
-
-  .sponsor-banner-2 {
-    height: clamp(28px, 8vw, 42px);
-    animation-duration: 15s;
-  }
-
-  .brochure-section {
-    top: 90%;
-  }
-
-  .brochure-button {
-    padding: 0.8rem 1.5rem;
-    font-size: clamp(0.9rem, 3vw, 1.1rem);
-  }
-
-  .knock-knock-text {
-    top: 92%;
-    font-size: clamp(1rem, 4vw, 1.6rem);
-  }
-
-  .contact-section {
-    display: none;
-  }
-
-}*/
-
 @keyframes fontCycle {
   0% {
-    font-family: 'Magz', serif;
-    color: #5C0023;
+    font-family: "Magz", serif;
+    color: #5c0023;
   }
 
   16.67% {
-    font-family: 'Owned', serif;
-    color: #5C0023;
+    font-family: "Owned", serif;
+    color: #5c0023;
   }
 
   33.33% {
-    font-family: 'YesevaOne', serif;
-    color: #5C0023;
+    font-family: "YesevaOne", serif;
+    color: #5c0023;
   }
 
   /* 50% {
@@ -447,33 +337,22 @@
   /*showing as MakeoAoTon*/
 
   66.67% {
-    font-family: 'Swistblnk Moalang Melintang', serif;
-    color: #5C0023;
+    font-family: "Swistblnk Moalang Melintang", serif;
+    color: #5c0023;
   }
 
   83.33% {
-    font-family: 'PlaylistScript', cursive;
-    color: #5C0023;
+    font-family: "PlaylistScript", cursive;
+    color: #5c0023;
   }
 
   100% {
-    font-family: 'Magz', serif;
-    color: #5C0023;
+    font-family: "Magz", serif;
+    color: #5c0023;
   }
 }
 
-
-
 /* DUPLICATE: Moved to animations.css */
-/*@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}*/
 
 .kathakali-shadow {
   position: absolute;
@@ -494,7 +373,6 @@
   will-change: transform;
   transform: translateZ(0);
 }
-
 
 /* Hide scrollbar but keep functionality */
 ::-webkit-scrollbar {
@@ -566,7 +444,6 @@ html {
 
 /* Pause animations when page is not visible for better performance */
 @media (prefers-reduced-motion: no-preference) {
-
   .scroll-banner,
   .sponsor-banner,
   .sponsor-banner-1,
@@ -606,8 +483,8 @@ html {
 }
 
 .activities-heading {
-  font-family: 'Canicule Display', serif;
-  color: #E8DBCC;
+  font-family: "Canicule Display", serif;
+  color: #e8dbcc;
   font-size: clamp(2rem, 6vw, 4rem);
   font-weight: bold;
   margin-bottom: 2rem;
@@ -656,8 +533,8 @@ html {
   left: 50%;
   top: 87%;
   transform: translateX(-50%);
-  font-family: 'Canicule', serif;
-  color: #5C0023;
+  font-family: "Canicule", serif;
+  color: #5c0023;
   font-size: clamp(2rem, 3vw, 3rem);
   font-weight: 600;
   text-align: center;
@@ -674,8 +551,8 @@ html {
   top: 91.5%;
   width: 100%;
   transform: translateX(-50%);
-  font-family: 'Canicule', serif;
-  color: #5C0023;
+  font-family: "Canicule", serif;
+  color: #5c0023;
   font-size: clamp(1.2rem, 4vw, 2.5rem);
   font-weight: 600;
   text-align: center;
@@ -731,11 +608,15 @@ html {
 .contact-button {
   display: inline-block;
   padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 4vw, 2rem);
-  background: linear-gradient(135deg, rgba(232, 219, 204, 0.9) 0%, rgba(245, 245, 220, 0.8) 100%);
-  color: #5C0023;
+  background: linear-gradient(
+    135deg,
+    rgba(232, 219, 204, 0.9) 0%,
+    rgba(245, 245, 220, 0.8) 100%
+  );
+  color: #5c0023;
   text-decoration: none;
   border-radius: clamp(8px, 2vw, 20px);
-  font-family: 'Racama', serif;
+  font-family: "Racama", serif;
   font-size: clamp(0.9rem, 2.5vw, 1.2rem);
   font-weight: 600;
   text-align: center;
@@ -748,7 +629,7 @@ html {
   font-size: clamp(0.6rem, 1.5vw, 0.8rem);
   font-weight: 400;
   font-style: italic;
-  color: #5C0023;
+  color: #5c0023;
   opacity: 0.7;
   text-align: center;
   line-height: 1.2;
@@ -757,25 +638,37 @@ html {
 }
 
 .contact-button:hover {
-  background: linear-gradient(135deg, rgba(92, 0, 35, 0.1) 0%, rgba(232, 219, 204, 0.9) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(92, 0, 35, 0.1) 0%,
+    rgba(232, 219, 204, 0.9) 100%
+  );
   border-color: rgba(92, 0, 35, 0.4);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(92, 0, 35, 0.2);
 }
 
 .call-button {
-  background: linear-gradient(135deg, rgba(92, 0, 35, 0.1) 0%, rgba(232, 219, 204, 0.9) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(92, 0, 35, 0.1) 0%,
+    rgba(232, 219, 204, 0.9) 100%
+  );
 }
 
 .email-button {
-  background: linear-gradient(135deg, rgba(232, 219, 204, 0.9) 0%, rgba(245, 245, 220, 0.8) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(232, 219, 204, 0.9) 0%,
+    rgba(245, 245, 220, 0.8) 100%
+  );
 }
 
 /* Previous Edition Link */
 .previous-edition-link {
-  font-family: 'Racama', serif;
+  font-family: "Racama", serif;
   font-size: clamp(0.6rem, 1.8vw, 1.5rem);
-  color: #5C0023;
+  color: #5c0023;
   text-decoration: none;
   opacity: 0.8;
   text-align: center;
@@ -787,7 +680,7 @@ html {
 
 .previous-edition-link:hover {
   opacity: 1;
-  color: #5C0023;
+  color: #5c0023;
   text-decoration: underline;
   transform: translateY(-1px);
 }
@@ -860,9 +753,7 @@ html {
   }
 }
 
-@media (max-width: 700px),
-(max-aspect-ratio: 2/3),
-(orientation: portrait) {
+@media (max-width: 700px), (max-aspect-ratio: 2/3), (orientation: portrait) {
   .wanna-connect-text.desktop-only {
     display: none;
   }
@@ -891,7 +782,10 @@ html {
 /* Mobile responsiveness for sponsors */
 @media (max-width: 1024px) {
   .sponsors-grid {
-    grid-template-columns: repeat(auto-fit, minmax(clamp(90px, 10vw, 180px), 1fr));
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(clamp(90px, 10vw, 180px), 1fr)
+    );
     gap: clamp(0.7rem, 2vw, 1.8rem);
   }
 
@@ -913,7 +807,10 @@ html {
   }
 
   .sponsors-grid {
-    grid-template-columns: repeat(auto-fit, minmax(clamp(80px, 15vw, 130px), 1fr));
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(clamp(80px, 15vw, 130px), 1fr)
+    );
     gap: clamp(0.6rem, 2vw, 1.2rem);
   }
 
@@ -943,30 +840,26 @@ html {
   }
 }
 
-
 /* Ensure mobile overrides take precedence over base decorative positions */
-@media (max-width: 700px),
-(max-aspect-ratio: 2/3),
-(orientation: portrait) {
+@media (max-width: 700px), (max-aspect-ratio: 2/3), (orientation: portrait) {
   .hackathon-subtitle {
     font-size: clamp(1.6rem, 7vw, 8rem) !important;
-    top: 10.5% ;
+    top: 10.5%;
   }
 
   .festival-quote {
-    left: 4% ;
-    top: 46% ;
+    left: 4%;
+    top: 46%;
     font-size: clamp(1.1rem, 5vw, 1.8rem) !important;
     max-width: 92% !important;
   }
 
-  .about-text {
+  /* .about-text {
     left: 6% !important;
     top: 50% !important;
     max-width: 88% !important;
     font-size: clamp(0.6rem, 2.7vw, 4rem) !important;
-  }
-
+  } */
 
   .sponsors-heading {
     font-size: clamp(1.5rem, 5vw, 2.5rem) !important;
@@ -1045,12 +938,10 @@ html {
     display: none !important;
   }
 
-
   .social-media-section {
     top: 98.5% !important;
     bottom: clamp(1.5rem, 4vw, 3rem) !important;
     transform: translateX(-50%) scale(0.7) !important;
-
   }
 
   /* Mobile overrides for "Wanna Sponsor US" intersecting banners */
@@ -1064,7 +955,6 @@ html {
   .sponsor-banner-1 {
     top: 88% !important;
     height: clamp(20px, 6vw, 36px) !important;
-
   }
 
   .sponsor-banner-2 {
@@ -1074,9 +964,7 @@ html {
 }
 
 /* Mobile override for Tracks & Prizes scrolling banner */
-@media (max-width: 700px),
-(max-aspect-ratio: 2/3),
-(orientation: portrait) {
+@media (max-width: 700px), (max-aspect-ratio: 2/3), (orientation: portrait) {
   .scroll-banner {
     top: 68% !important;
     height: clamp(16px, 5vw, 28px) !important;
@@ -1107,10 +995,10 @@ html {
 
 .banner-text {
   display: inline-block;
-  font-family: 'Canicule', serif;
+  font-family: "Canicule", serif;
   font-size: clamp(1.2rem, 3vw, 2.2rem);
   font-weight: 600;
-  color: #5C0023;
+  color: #5c0023;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   padding-right: 2em;
   animation: textScroll 20s linear infinite;

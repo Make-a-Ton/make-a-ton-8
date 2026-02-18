@@ -1,10 +1,12 @@
 .tracks-container {
   min-height: 100vh;
-  width: 100%;
+  min-width: 100%;
   position: relative;
-  display: block;
+  display: flex;
+  align-items: end;
+  justify-content: center;
   /* The Color logic */
-  background-color: #E8D7C3;
+  background-color: #e8d7c3;
   overflow: visible;
   margin: 0;
   padding: 0;
@@ -14,8 +16,9 @@
   position: relative;
   z-index: 1;
   padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 3vw, 2rem);
-  color: #5C0023;
+  color: #5c0023;
   height: 100%;
+  min-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,35 +28,35 @@
 
 /* Stats Section */
 .stats-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 equal boxes */
-  gap: clamp(1rem, 2vw, 2rem);
-  margin-bottom: clamp(1.5rem, 4vw, 3rem);
+  display: flex;
+  justify-content: space-around;
   width: 90%;
   max-width: 1200px;
+  margin-bottom: clamp(1.5rem, 4vw, 3rem);
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .stat-box {
-  background-color: #D4A574;
-  border: 3px solid #5C0023;
-  border-radius: clamp(12px, 3vw, 20px);
-  padding: clamp(2rem, 5vw, 3rem) clamp(1.5rem, 4vw, 3rem);
   text-align: center;
-  min-width: clamp(100px, 100%, 300px);
+  min-width: 150px;
+  /* Removed border and background for a cleaner look */
 }
 
 .stat-number {
-  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-size: clamp(2.5rem, 5vw, 4rem); /* Made bigger */
   font-weight: bold;
-  color: #5C0023;
-  font-family: 'Owned', serif;
+  color: #5c0023;
+  font-family: "Owned", serif;
+  line-height: 1;
 }
 
 .stat-label {
-  font-size: clamp(0.9rem, 2vw, 1.2rem);
-  color: #5C0023;
-  font-family: 'YesevaOne', serif;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: #5c0023;
+  font-family: "YesevaOne", serif;
   margin-top: 0.5rem;
+  letter-spacing: 1px;
 }
 
 /* Tracks and Prizes Wrapper */
@@ -72,38 +75,54 @@
 .prizes-column {
   display: flex;
   flex-direction: row;
-  gap: clamp(1rem, 2vw, 1.5rem);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
 .section-title {
-  font-size: clamp(2rem, 6vw, 3rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: bold;
-  color: #5C0023;
-  font-family: 'YesevaOne', serif;
-  margin: 0 0 clamp(0.8rem, 2vw, 1.5rem) 0;
+  color: #5c0023;
+  font-family: "YesevaOne", serif;
+  margin: 0 0 clamp(1.5rem, 3vw, 2.5rem) 0;
   text-align: center;
   letter-spacing: clamp(1px, 0.5vw, 3px);
   flex-basis: 100%;
   width: 100%;
+  text-transform: uppercase;
 }
 
+/* .track-card {
+  padding: 1rem 2rem;
+  text-align: center;
+  color: #5c0023; 
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-family: "Racama", serif;
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+} */
+
 .track-card {
-  background-color: #5C0023;
+  background-color: #5c0023;
   border-radius: clamp(12px, 3vw, 20px);
   padding: clamp(1.5rem, 3vw, 2rem);
   text-align: center;
-  color: #E8D7C3;
+  color: #e8d7c3;
   font-size: clamp(1rem, 2.5vw, 1.4rem);
-  font-family: 'Nixie One', serif;
+  font-family: "Nixie One", serif;
   letter-spacing: clamp(1px, 0.5vw, 2px);
   min-height: clamp(60px, 12vw, 80px);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   flex: 1;
   min-width: clamp(80px, 20%, 200px);
 }
@@ -114,15 +133,21 @@
 }
 
 .prize-card {
-  background-color: #5C0023;
+  /* kept simple for now, can match tracks if needed */
+  background-color: transparent;
+  border: 2px solid #5c0023;
+  color: #5c0023;
   border-radius: clamp(10px, 2vw, 15px);
   padding: clamp(1rem, 2vw, 1.5rem);
   min-height: clamp(45px, 10vw, 60px);
   transition: transform 0.2s ease;
+  font-family: "Nixie One", serif;
 }
 
 .prize-card:hover {
   transform: translateY(-2px);
+  background-color: #5c0023;
+  color: #e8d7c3;
 }
 
 /* Boat and Waves Images */
@@ -153,7 +178,7 @@
 /* ========== DESKTOP (min-width: 769px) ========== */
 @media (min-width: 769px) {
   .tracks-container {
-    background-color: #E8D7C3;
+    background-color: #e8d7c3;
   }
 
   .tracks-content {
@@ -191,7 +216,7 @@
 /* ========== TABLET (max-width: 768px) ========== */
 @media (max-width: 768px) {
   .tracks-container {
-    background-color: #E8D7C3;
+    background-color: #e8d7c3;
   }
 
   .tracks-content {
@@ -242,7 +267,7 @@
 /* ========== NARROW/PORTRAIT (max-width: 700px) or 2:3 aspect ratio ========== */
 @media (max-width: 700px), (max-aspect-ratio: 2/3), (orientation: portrait) {
   .tracks-container {
-    background-color: #E8D7C3;
+    background-color: #e8d7c3;
     overflow: visible;
   }
 
@@ -369,12 +394,14 @@
 .dropdown-content {
   max-height: 0;
   overflow: hidden;
-  background-color: #E8D7C3;
-  border: 2px solid #5C0023;
+  background-color: #e8d7c3;
+  border: 2px solid #5c0023;
   border-radius: 12px;
   margin-top: 0.5rem;
   padding: 0 1rem;
-  transition: max-height 0.35s ease, padding 0.35s ease;
+  transition:
+    max-height 0.35s ease,
+    padding 0.35s ease;
 }
 
 /* When open */
@@ -386,8 +413,8 @@
 /* Text inside dropdown */
 .dropdown-content p {
   margin: 0;
-  color: #5C0023;
-  font-family: 'YesevaOne', serif;
+  color: #5c0023;
+  font-family: "YesevaOne", serif;
   font-size: 1rem;
   line-height: 1.5;
 }
