@@ -28,11 +28,11 @@ export default function Sponsers() {
         <h2 className="sponsor-title">Gold sponsor</h2>
         <div className="stamp-row">
           <div className="stamp-box">
-            {/* <img
+            <img
             className="sponser-logo"
-            src={}
+            src={"sponsors/buffersec.png"}
             alt="Platinum Sponsor"
-          /> */}
+          />
           </div>
           <div className="stamp-box">
             <img
@@ -46,21 +46,21 @@ export default function Sponsers() {
         {/* Platform */}
         <h2 className="sponsor-title">Platform partner</h2>
         <div className="stamp-box">
-          {/* <img
+          <img
             className="sponser-logo"
-            src={platinumSponsor}
+            src={"sponsors/makemypass-white.svg"}
             alt="Platinum Sponsor"
-          /> */}
+          />
         </div>
 
         {/* Merchandise */}
         <h2 className="sponsor-title">Merchandise Partner</h2>
         <div className="stamp-box">
-          {/* <img
+          <img
             className="sponser-logo"
-            src={platinumSponsor}
+            src={"sponsors/DESH KEYBOARD.png"}
             alt="Platinum Sponsor"
-          /> */}
+          />
         </div>
 
         {/* Prize */}
@@ -94,11 +94,11 @@ export default function Sponsers() {
           />
           </div>
           <div className="stamp-box">
-            {/* <img
+            <img
             className="sponser-logo"
-            src={refreshmentpartner}
+            src={"sponsors/pechacks-1-white-tr.svg"}
             alt="Platinum Sponsor"
-          /> */}
+          />
           </div>
         </div>
       </div>

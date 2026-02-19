@@ -65,7 +65,7 @@ const Tracks: React.FC = () => {
             <div className="stat-label">Participants</div>
           </div>
           <div className="stat-box">
-            <div className="stat-number">2000+</div>
+            <div className="stat-number">1900+</div>
             <div className="stat-label">Registrations</div>
           </div>
           <div className="stat-box">
