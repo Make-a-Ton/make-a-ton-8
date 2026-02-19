@@ -15,7 +15,6 @@ export default function Hero() {
         South India's Biggest <span className="hackathon-word">Hackathon</span>
       </p>
       <a
-        href="https://makemypass.com/event/makeaton/"
         target="_blank"
         rel="noopener noreferrer"
         className="register-button"

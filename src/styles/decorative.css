@@ -1,4 +1,3 @@
-
 .circle-text {
   position: absolute;
   font-family: 'YesevaOne', serif;
@@ -42,8 +41,8 @@
   .kathakali-shadow {
     position: absolute;
     right: -3%;
-    top: 13%;
-    scale: 1.7;
+    top: 12%;
+    scale: 1.5;
     width: clamp(95px, 32vw, 370px);
     height: auto;
     z-index: 999;
@@ -138,7 +137,7 @@
     right: 2% !important;
     filter: blur(clamp(12px, 2vw, 30px)) drop-shadow(0 clamp(8px, 1.5vw, 20px) clamp(20px, 3vw, 40px) rgba(92, 0, 35, 0.25));
     opacity: 0.3;
-    z-index: -1;
+    z-index: -10000;
   }
 }
 
@@ -164,7 +163,7 @@
     right: -4%;
     width: clamp(100px, 60vw, 480px);
   }
-  
+
   .kathakali-image.kathakali-1 {
     display: block !important;
     right: 3% !important;
@@ -196,13 +195,15 @@
   }
 }
 
-@media (max-width: 700px), (max-aspect-ratio: 2 / 3), (orientation: portrait) {
+@media (max-width: 700px),
+(max-aspect-ratio: 2 / 3),
+(orientation: portrait) {
   .kathakali-shadow {
     display: block !important;
-    right: 10% !important;
-    top: 35% !important;
-    width: clamp(100px, 22vw, 180px) !important;
-    scale: 3.3 !important;
+    right: 15% !important;
+    top: 36% !important;
+    width: clamp(50px, 15vw, 100px) !important;
+    scale: 4.8 !important;
     opacity: 0.18 !important;
     z-index: 999 !important;
   }
@@ -292,6 +293,7 @@
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -299,6 +301,7 @@
 
 
 @media (prefers-reduced-motion: no-preference) {
+
   .scroll-banner,
   .sponsor-banner,
   .sponsor-banner-1,
@@ -318,7 +321,9 @@
 }
 
 
-@media (max-aspect-ratio: 2/3), (orientation: portrait), (max-width: 700px) {
+@media (max-aspect-ratio: 2/3),
+(orientation: portrait),
+(max-width: 700px) {
   .circle-text {
     right: 4% !important;
     top: 35% !important;

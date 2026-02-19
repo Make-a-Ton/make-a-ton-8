@@ -3,7 +3,6 @@ import platinumSponsor from "../../assets/kireap_logo.png";
 import goldSponsor2 from "../../assets/fixmystore logo.png";
 import prizepartner from "../../assets/cusattech foundation logo.png"
 import refreshmentpartner from "../../assets/kappo logo.png"
-import communitypartner1 from "../../assets/TinkerHub logo.png"
 export default function Sponsers() {
   return (
     <div className="sponsor-container">
@@ -89,7 +88,7 @@ export default function Sponsers() {
           <div className="stamp-box">
             <img
             className="sponser-logo"
-            src={communitypartner1}
+            src={"sponsors/tinker-white.png"}
             alt="Community Sponsor"
           />
           </div>

@@ -3,7 +3,7 @@ import { useMediaQuery } from "../../src/hooks/useMediaQuery";
 export default function AboutText() {
   const isDesktop = useMediaQuery("(min-width: 1201px)");
   const isTablet = useMediaQuery("(min-width: 769px) and (max-width: 1200px)");
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  //const isMobile = useMediaQuery("(max-width: 768px)");
 
   let modifier = "";
   if (isDesktop) modifier = "about-text--desktop";

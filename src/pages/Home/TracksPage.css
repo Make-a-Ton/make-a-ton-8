@@ -44,7 +44,8 @@
 }
 
 .stat-number {
-  font-size: clamp(2.5rem, 5vw, 4rem); /* Made bigger */
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  /* Made bigger */
   font-weight: bold;
   color: #5c0023;
   font-family: "Owned", serif;
@@ -253,7 +254,9 @@
 }
 
 /* ========== NARROW/PORTRAIT (max-width: 700px) or 2:3 aspect ratio ========== */
-@media (max-width: 700px), (max-aspect-ratio: 2/3), (orientation: portrait) {
+@media (max-width: 700px),
+(max-aspect-ratio: 2/3),
+(orientation: portrait) {
   .tracks-container {
     background-color: #e8d7c3;
     overflow: visible;
@@ -270,6 +273,7 @@
     gap: 1rem;
     margin-bottom: 1.5rem;
     align-items: center;
+    margin-top: 16rem;
   }
 
   .stat-box {
@@ -373,6 +377,7 @@
     right: clamp(-10%, -5vw, -2%);
   }
 }
+
 /* Make cards clickable */
 .clickable {
   cursor: pointer;
@@ -437,9 +442,9 @@
   align-items: center;
 }
 
-.prizes-subtitle{
-    font-size: 25px;
-    font-weight: 50;
-    font-family:"Racama";
-    margin-top: 0.2rem;
+.prizes-subtitle {
+  font-size: 25px;
+  font-weight: 50;
+  font-family: "Racama";
+  margin-top: 0.2rem;
 }

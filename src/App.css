@@ -168,6 +168,7 @@
 }
 
 @keyframes sparkle {
+
   0%,
   100% {
     transform: scale(1) rotate(0deg);
@@ -183,6 +184,7 @@
 /* DUPLICATE: Moved to animations.css */
 
 @keyframes cardPulse {
+
   0%,
   100% {
     box-shadow:
@@ -200,57 +202,47 @@
 }
 
 @keyframes gradientShift {
+
   0%,
   100% {
     background:
-      linear-gradient(
-        135deg,
+      linear-gradient(135deg,
         rgba(92, 0, 35, 0.1) 0%,
         transparent 30%,
         transparent 70%,
-        rgba(92, 0, 35, 0.05) 100%
-      ),
+        rgba(92, 0, 35, 0.05) 100%),
       radial-gradient(2px 2px at 20px 30px, rgba(92, 0, 35, 0.3), transparent),
-      radial-gradient(
-        2px 2px at 40px 70px,
+      radial-gradient(2px 2px at 40px 70px,
         rgba(232, 219, 204, 0.4),
-        transparent
-      ),
+        transparent),
       radial-gradient(1px 1px at 90px 40px, rgba(92, 0, 35, 0.2), transparent),
-      radial-gradient(
-        1px 1px at 130px 80px,
+      radial-gradient(1px 1px at 130px 80px,
         rgba(232, 219, 204, 0.3),
-        transparent
-      ),
+        transparent),
       radial-gradient(2px 2px at 160px 30px, rgba(92, 0, 35, 0.25), transparent);
   }
 
   50% {
     background:
-      linear-gradient(
-        135deg,
+      linear-gradient(135deg,
         rgba(92, 0, 35, 0.15) 0%,
         transparent 20%,
         transparent 80%,
-        rgba(92, 0, 35, 0.08) 100%
-      ),
+        rgba(92, 0, 35, 0.08) 100%),
       radial-gradient(2px 2px at 30px 40px, rgba(92, 0, 35, 0.4), transparent),
-      radial-gradient(
-        2px 2px at 60px 80px,
+      radial-gradient(2px 2px at 60px 80px,
         rgba(232, 219, 204, 0.5),
-        transparent
-      ),
+        transparent),
       radial-gradient(1px 1px at 100px 50px, rgba(92, 0, 35, 0.3), transparent),
-      radial-gradient(
-        1px 1px at 140px 90px,
+      radial-gradient(1px 1px at 140px 90px,
         rgba(232, 219, 204, 0.4),
-        transparent
-      ),
+        transparent),
       radial-gradient(2px 2px at 170px 40px, rgba(92, 0, 35, 0.35), transparent);
   }
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0px) translateX(0px);
@@ -274,6 +266,7 @@
 }
 
 @keyframes wave {
+
   0%,
   100% {
     transform: translateX(0px) scale(1);
@@ -297,6 +290,7 @@
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -444,6 +438,7 @@ html {
 
 /* Pause animations when page is not visible for better performance */
 @media (prefers-reduced-motion: no-preference) {
+
   .scroll-banner,
   .sponsor-banner,
   .sponsor-banner-1,
@@ -508,7 +503,7 @@ html {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 700px) {
   .activities-section {
     width: 98%;
     top: 40%;
@@ -525,6 +520,8 @@ html {
   .social-links {
     gap: clamp(1.5rem, 4vw, 2.5rem);
   }
+
+
 }
 
 /* Wanna Connect Text - Desktop */
@@ -608,11 +605,9 @@ html {
 .contact-button {
   display: inline-block;
   padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 4vw, 2rem);
-  background: linear-gradient(
-    135deg,
-    rgba(232, 219, 204, 0.9) 0%,
-    rgba(245, 245, 220, 0.8) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(232, 219, 204, 0.9) 0%,
+      rgba(245, 245, 220, 0.8) 100%);
   color: #5c0023;
   text-decoration: none;
   border-radius: clamp(8px, 2vw, 20px);
@@ -638,30 +633,24 @@ html {
 }
 
 .contact-button:hover {
-  background: linear-gradient(
-    135deg,
-    rgba(92, 0, 35, 0.1) 0%,
-    rgba(232, 219, 204, 0.9) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(92, 0, 35, 0.1) 0%,
+      rgba(232, 219, 204, 0.9) 100%);
   border-color: rgba(92, 0, 35, 0.4);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(92, 0, 35, 0.2);
 }
 
 .call-button {
-  background: linear-gradient(
-    135deg,
-    rgba(92, 0, 35, 0.1) 0%,
-    rgba(232, 219, 204, 0.9) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(92, 0, 35, 0.1) 0%,
+      rgba(232, 219, 204, 0.9) 100%);
 }
 
 .email-button {
-  background: linear-gradient(
-    135deg,
-    rgba(232, 219, 204, 0.9) 0%,
-    rgba(245, 245, 220, 0.8) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(232, 219, 204, 0.9) 0%,
+      rgba(245, 245, 220, 0.8) 100%);
 }
 
 /* Previous Edition Link */
@@ -753,7 +742,9 @@ html {
   }
 }
 
-@media (max-width: 700px), (max-aspect-ratio: 2/3), (orientation: portrait) {
+@media (max-width: 700px),
+(max-aspect-ratio: 2/3),
+(orientation: portrait) {
   .wanna-connect-text.desktop-only {
     display: none;
   }
@@ -782,10 +773,8 @@ html {
 /* Mobile responsiveness for sponsors */
 @media (max-width: 1024px) {
   .sponsors-grid {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(clamp(90px, 10vw, 180px), 1fr)
-    );
+    grid-template-columns: repeat(auto-fit,
+        minmax(clamp(90px, 10vw, 180px), 1fr));
     gap: clamp(0.7rem, 2vw, 1.8rem);
   }
 
@@ -807,10 +796,8 @@ html {
   }
 
   .sponsors-grid {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(clamp(80px, 15vw, 130px), 1fr)
-    );
+    grid-template-columns: repeat(auto-fit,
+        minmax(clamp(80px, 15vw, 130px), 1fr));
     gap: clamp(0.6rem, 2vw, 1.2rem);
   }
 
@@ -841,7 +828,9 @@ html {
 }
 
 /* Ensure mobile overrides take precedence over base decorative positions */
-@media (max-width: 700px), (max-aspect-ratio: 2/3), (orientation: portrait) {
+@media (max-width: 700px),
+(max-aspect-ratio: 2/3),
+(orientation: portrait) {
   .hackathon-subtitle {
     font-size: clamp(1.6rem, 7vw, 8rem) !important;
     top: 10.5%;
@@ -964,7 +953,9 @@ html {
 }
 
 /* Mobile override for Tracks & Prizes scrolling banner */
-@media (max-width: 700px), (max-aspect-ratio: 2/3), (orientation: portrait) {
+@media (max-width: 700px),
+(max-aspect-ratio: 2/3),
+(orientation: portrait) {
   .scroll-banner {
     top: 68% !important;
     height: clamp(16px, 5vw, 28px) !important;
