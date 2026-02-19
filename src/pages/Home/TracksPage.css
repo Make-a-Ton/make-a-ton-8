@@ -94,18 +94,6 @@
   text-transform: uppercase;
 }
 
-/* .track-card {
-  padding: 1rem 2rem;
-  text-align: center;
-  color: #5c0023; 
-  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-  font-family: "Racama", serif;
-  letter-spacing: 2px;
-  cursor: pointer;
-  position: relative;
-  transition: all 0.3s ease;
-  border-bottom: 2px solid transparent;
-} */
 
 .track-card {
   background-color: #5c0023;
@@ -124,7 +112,7 @@
     transform 0.2s ease,
     box-shadow 0.2s ease;
   flex: 1;
-  min-width: clamp(80px, 20%, 200px);
+  min-width: clamp(80px, 30%, 200px);
 }
 
 .track-card:hover {
@@ -423,4 +411,35 @@
 .track-card.active,
 .prize-card.active {
   transform: translateY(-2px);
+}
+
+.tracks-prizes-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* Tracks row */
+.tracks-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Prizes section */
+.prizes-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prizes-subtitle{
+    font-size: 25px;
+    font-weight: 50;
+    font-family:"Racama";
+    margin-top: 0.2rem;
 }

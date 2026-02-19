@@ -3,18 +3,14 @@ import gsap from "gsap";
 import "./TracksPage.css";
 import boatImage from "../../assets/boat image.png";
 import wavesImage from "../../assets/waves.png";
+import Prizes from "./Prizes"; 
 
 const Tracks: React.FC = () => {
   const [openTrack, setOpenTrack] = useState<string | null>(null);
-  // const [openPrize, setOpenPrize] = useState<number | null>(null);
 
   const toggleTrack = (name: string) => {
     setOpenTrack((prev) => (prev === name ? null : name));
   };
-
-  // const togglePrize = (index: number) => {
-  //   setOpenPrize((prev) => (prev === index ? null : index));
-  // };
 
   const statsRef = useRef<HTMLDivElement>(null);
 
@@ -27,7 +23,7 @@ const Tracks: React.FC = () => {
             stats.forEach((stat) => {
               const targetText = stat.textContent || "";
               const targetValue = parseInt(targetText.replace(/\D/g, ""), 10);
-              const suffix = targetText.replace(/[0-9]/g, ""); // Extract non-numeric characters (like +)
+              const suffix = targetText.replace(/[0-9]/g, "");
 
               if (!isNaN(targetValue)) {
                 const obj = { value: 0 };
@@ -45,7 +41,7 @@ const Tracks: React.FC = () => {
           observer.disconnect();
         }
       },
-      { threshold: 0.5 },
+      { threshold: 0.5 }
     );
 
     if (statsRef.current) {
@@ -74,41 +70,45 @@ const Tracks: React.FC = () => {
           </div>
         </div>
 
-        {/* Tracks Section */}
+        {/* Tracks + Prizes Section */}
         <div className="tracks-prizes-wrapper">
+          {/* Tracks */}
           <div className="tracks-column">
             <h2 className="section-title">TRACKS</h2>
 
-            <div
-              className={`track-card clickable ${openTrack === "software" ? "active" : ""}`}
-              onClick={() => toggleTrack("software")}
-            >
-              <span>SOFTWARE</span>
-            </div>
+            <div className="tracks-row">
+              <div
+                className={`track-card clickable ${openTrack === "software" ? "active" : ""}`}
+                onClick={() => toggleTrack("software")}
+              >
+                <span>SOFTWARE</span>
+              </div>
 
-            <div
-              className={`track-card clickable ${openTrack === "hardware" ? "active" : ""}`}
-              onClick={() => toggleTrack("hardware")}
-            >
-              <span>HARDWARE</span>
-            </div>
+              <div
+                className={`track-card clickable ${openTrack === "hardware" ? "active" : ""}`}
+                onClick={() => toggleTrack("hardware")}
+              >
+                <span>HARDWARE</span>
+              </div>
 
-            <div
-              className={`track-card clickable ${openTrack === "kireap" ? "active" : ""}`}
-              onClick={() => toggleTrack("kireap")}
-            >
-              <span>KIREAP</span>
+              <div
+                className={`track-card clickable ${openTrack === "kireap" ? "active" : ""}`}
+                onClick={() => toggleTrack("kireap")}
+              >
+                <span>KIREAP</span>
+              </div>
             </div>
+          </div>
+
+          {/* Prizes */}
+          <div className="prizes-section">
+            <h2 className="section-title">PRIZES</h2>
+            <p className="prizes-subtitle">Total prize pool of 90K</p>
+            <Prizes />
           </div>
         </div>
 
-        {/* Prizes Column */}
-        {/* <div className="prizes-column">
-            <h2 className="section-title">PRIZES</h2>
-
-            {/* Prize 1 */}
-
-        {/* Waves Image */}
+        {/* Decorative Images */}
         <img
           src={boatImage}
           alt="Boat"
