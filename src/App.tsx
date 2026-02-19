@@ -619,9 +619,34 @@ function Home() {
 // Redirect component for external URLs
 function ExternalRedirect({ to }: { to: string }) {
   useEffect(() => {
-    window.location.href = to
+    window.location.replace(to)
   }, [to])
-  return null
+  
+  // Fallback UI in case redirect doesn't work (common on mobile)
+  return (
+    <div style={{ 
+      display: 'flex', 
+      flexDirection: 'column', 
+      alignItems: 'center', 
+      justifyContent: 'center', 
+      height: '100vh',
+      fontFamily: 'sans-serif',
+      padding: '20px',
+      textAlign: 'center'
+    }}>
+      <p style={{ marginBottom: '20px' }}>Redirecting...</p>
+      <a 
+        href={to} 
+        style={{ 
+          color: '#007bff', 
+          textDecoration: 'underline',
+          fontSize: '18px'
+        }}
+      >
+        Click here if not redirected
+      </a>
+    </div>
+  )
 }
 
 function App() {
