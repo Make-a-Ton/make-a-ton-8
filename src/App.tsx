@@ -643,6 +643,7 @@ function App() {
       <Route path="/telegram" element={<ExternalRedirect to="https://t.me/makeaton7" />} />
       <Route path="/x" element={<ExternalRedirect to="https://x.com/MakeatonCusat" />} />
       <Route path="/ideawall" element={<ExternalRedirect to="https://make-a-ton.github.io/The_Second_Commit/" />} />
+      <Route path="/kireap" element={<ExternalRedirect to="https://meet.google.com/bfa-iomd-yff" />} />
       
       <Route path="*" element={<NotFound />} />
     </Routes>
