@@ -22,7 +22,7 @@ const Prizes: React.FC = () => {
         </div>
 
         <div className="prize-card small">
-          <div className="prize-amount">10K</div>
+          <div className="prize-amount">15K</div>
           <div className="prize-title">Runner Up</div>
         </div>
 
