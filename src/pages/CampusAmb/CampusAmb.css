@@ -1,285 +1,418 @@
 /* campus-amb Page Styles - Make-A-Ton Theme */
 
 @font-face {
-  font-family: "Canicule Display";
-  src: url("./assets/fonts/CaniculeDisplay.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Canicule Display';
+    src: url('./assets/fonts/CaniculeDisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "PlaylistScript";
-  src: url("./assets/fonts/PlaylistScript.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'PlaylistScript';
+    src: url('./assets/fonts/PlaylistScript.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Racama";
-  src: url("./assets/fonts/Racama.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Racama';
+    src: url('./assets/fonts/Racama.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "YesevaOne";
-  src: url("./assets/fonts/YesevaOne-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'YesevaOne';
+    src: url('./assets/fonts/YesevaOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
+
+
 
 .campus-amb-page {
-  min-height: 100vh;
-  width: 100%;
-  background: linear-gradient(
-    135deg,
-    #1a0a0f 0%,
-    #2d0a18 25%,
-    #3d0c1f 50%,
-    #2d0a18 75%,
-    #1a0a0f 100%
-  );
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: clamp(1rem, 4vw, 3rem);
-  box-sizing: border-box;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #1a0a0f 0%, #2d0a18 25%, #3d0c1f 50%, #2d0a18 75%, #1a0a0f 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(1rem, 4vw, 3rem);
+    box-sizing: border-box;
 }
 
 /* Decorative background pattern */
 .campus-amb-bg-pattern {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image:
-    radial-gradient(
-      circle at 20% 30%,
-      rgba(232, 219, 204, 0.03) 0%,
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 80% 70%,
-      rgba(232, 219, 204, 0.03) 0%,
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 50% 50%,
-      rgba(92, 0, 35, 0.05) 0%,
-      transparent 60%
-    );
-  pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(232, 219, 204, 0.03) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(232, 219, 204, 0.03) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(92, 0, 35, 0.05) 0%, transparent 60%);
+    pointer-events: none;
 }
 
 /* Glowing orbs */
 .campus-amb-glow {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.4;
-  pointer-events: none;
-  animation: glowPulse 8s ease-in-out infinite;
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    pointer-events: none;
+    animation: glowPulse 8s ease-in-out infinite;
 }
 
 .campus-amb-glow-1 {
-  width: clamp(200px, 40vw, 500px);
-  height: clamp(200px, 40vw, 500px);
-  background: radial-gradient(circle, rgba(92, 0, 35, 0.6) 0%, transparent 70%);
-  top: -10%;
-  right: -10%;
-  animation-delay: 0s;
+    width: clamp(200px, 40vw, 500px);
+    height: clamp(200px, 40vw, 500px);
+    background: radial-gradient(circle, rgba(92, 0, 35, 0.6) 0%, transparent 70%);
+    top: -10%;
+    right: -10%;
+    animation-delay: 0s;
 }
 
 .campus-amb-glow-2 {
-  width: clamp(150px, 30vw, 400px);
-  height: clamp(150px, 30vw, 400px);
-  background: radial-gradient(
-    circle,
-    rgba(232, 219, 204, 0.15) 0%,
-    transparent 70%
-  );
-  bottom: -5%;
-  left: -5%;
-  animation-delay: 4s;
+    width: clamp(150px, 30vw, 400px);
+    height: clamp(150px, 30vw, 400px);
+    background: radial-gradient(circle, rgba(232, 219, 204, 0.15) 0%, transparent 70%);
+    bottom: -5%;
+    left: -5%;
+    animation-delay: 4s;
 }
 
 @keyframes glowPulse {
-  0%,
-  100% {
-    opacity: 0.3;
-    transform: scale(1);
-  }
 
-  50% {
-    opacity: 0.5;
-    transform: scale(1.1);
-  }
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(1.1);
+    }
 }
 
 /* Content container */
+p {
+    text-align: center;
+}
+
+
 .campus-amb-content {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: clamp(1.5rem, 4vw, 2.5rem);
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1.5rem, 4vw, 2.5rem);
 }
 
 /* Logo */
 .campus-amb-logo-link {
-  display: block;
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .campus-amb-logo-link:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
+    transform: scale(1.05);
+    opacity: 0.9;
 }
 
 .campus-amb-logo {
-  width: clamp(120px, 25vw, 200px);
-  height: auto;
-  filter: drop-shadow(0 4px 20px rgba(232, 219, 204, 0.2));
+    width: clamp(120px, 25vw, 200px);
+    height: auto;
+    filter: drop-shadow(0 4px 20px rgba(232, 219, 204, 0.2));
 }
 
 /* Header */
 .campus-amb-header {
-  text-align: center;
+    text-align: center;
 }
 
 .campus-amb-title {
-  font-family: "YesevaOne", serif;
-  color: #e8dbcc;
-  font-size: clamp(2rem, 6vw, 3.5rem);
-  font-weight: bold;
-  margin: 0 0 0.5rem 0;
-  text-shadow: 0 4px 20px rgba(92, 0, 35, 0.4);
-  letter-spacing: 0.02em;
-  line-height: 1.1;
+    font-family: 'YesevaOne', serif;
+    color: #E8DBCC;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: bold;
+    margin: 0 0 0.5rem 0;
+    text-shadow: 0 4px 20px rgba(92, 0, 35, 0.4);
+    letter-spacing: 0.02em;
+    line-height: 1.1;
 }
 
-.campus-amba-subtitle {
-  font-family: "Racama", serif;
-  color: #e8dbcc80;
-  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-  margin: 0;
-  line-height: 1.5;
-  max-width: 400px;
+.campus-amb-subtitle {
+    font-family: 'Racama', serif;
+    color: #E8DBCC;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    margin: 0 auto;
+    line-height: 1.5;
+    max-width: 400px;
+    text-align: center;
 }
 
 /* Form container */
 .campus-amb-form-container {
-  width: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(232, 219, 204, 0.08) 0%,
-    rgba(232, 219, 204, 0.04) 50%,
-    rgba(232, 219, 204, 0.08) 100%
-  );
-  border: 1px solid rgba(232, 219, 204, 0.15);
-  border-radius: clamp(32px, 6vw, 60px);
-  padding: clamp(1rem, 2.5vw, 1.8rem);
-  backdrop-filter: blur(10px);
-  box-shadow:
-    0 20px 60px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(232, 219, 204, 0.05),
-    inset 0 1px 0 rgba(232, 219, 204, 0.1);
-  position: relative;
-  overflow: hidden;
+    width: 100%;
+    background: linear-gradient(135deg,
+            rgba(232, 219, 204, 0.08) 0%,
+            rgba(232, 219, 204, 0.04) 50%,
+            rgba(232, 219, 204, 0.08) 100%);
+    border: 1px solid rgba(232, 219, 204, 0.15);
+    border-radius: clamp(32px, 6vw, 60px);
+    padding: clamp(1rem, 2.5vw, 1.8rem);
+    backdrop-filter: blur(10px);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(232, 219, 204, 0.05),
+        inset 0 1px 0 rgba(232, 219, 204, 0.1);
+    position: relative;
+    overflow: hidden;
 }
 
 .campus-amb-form-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(232, 219, 204, 0.3) 50%,
-    transparent 100%
-  );
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(232, 219, 204, 0.3) 50%,
+            transparent 100%);
 }
 
 .campus-amb-form-container iframe {
-  display: block;
-  border: none;
-  min-height: 424px;
-  background: transparent;
-  border-radius: clamp(16px, 3vw, 30px);
+    display: block;
+    border: none;
+    min-height: 424px;
+    background: transparent;
+    border-radius: clamp(16px, 3vw, 30px);
 }
 
 /* Footer */
 .campus-amb-footer {
-  text-align: center;
+    text-align: center;
 }
 
 .campus-amb-footer p {
-  font-family: "Racama", serif;
-  color: rgba(232, 219, 204, 0.4);
-  font-size: clamp(0.75rem, 2vw, 0.85rem);
-  margin: 0;
-  font-style: italic;
+    font-family: 'Racama', serif;
+    color: rgba(232, 219, 204, 0.4);
+    font-size: clamp(0.75rem, 2vw, 0.85rem);
+    margin: 0;
+    font-style: italic;
 }
 
 /* Mobile responsiveness */
 @media (max-width: 600px) {
-  .campus-amb-page {
-    padding: clamp(1rem, 5vw, 2rem);
-    align-items: flex-start;
-    padding-top: clamp(2rem, 8vw, 4rem);
-  }
+    .campus-amb-page {
+        padding: clamp(1rem, 5vw, 2rem);
+        align-items: flex-start;
+        padding-top: clamp(2rem, 8vw, 4rem);
+    }
 
-  .campus-amb-content {
-    gap: clamp(1rem, 4vw, 1.5rem);
-  }
+    .campus-amb-content {
+        gap: clamp(1rem, 4vw, 1.5rem);
+    }
 
-  .campus-amb-form-container {
-    padding: clamp(0.75rem, 3vw, 1.5rem);
-  }
+    .campus-amb-form-container {
+        padding: clamp(0.75rem, 3vw, 1.5rem);
+    }
 }
 
 /* Animation for page load */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .campus-amb-logo-link {
-  animation: fadeInUp 0.6s ease-out both;
+    animation: fadeInUp 0.6s ease-out both;
 }
 
 .campus-amb-header {
-  animation: fadeInUp 0.6s ease-out 0.1s both;
+    animation: fadeInUp 0.6s ease-out 0.1s both;
 }
 
 .campus-amb-form-container {
-  animation: fadeInUp 0.6s ease-out 0.2s both;
+    animation: fadeInUp 0.6s ease-out 0.2s both;
 }
 
 .campus-amb-footer {
-  animation: fadeInUp 0.6s ease-out 0.3s both;
+    animation: fadeInUp 0.6s ease-out 0.3s both;
 }
 
 /* Hide scrollbar */
 .campus-amb-page::-webkit-scrollbar {
-  width: 0;
-  background: transparent;
+    width: 0;
+    background: transparent;
+}
+
+/* Leaderboard Styles */
+.leaderboard-container {
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+    animation: fadeInUp 0.6s ease-out 0.15s both;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.leaderboard-title {
+    font-family: 'YesevaOne', serif;
+    color: #E8DBCC;
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+    text-shadow: 0 4px 20px rgba(92, 0, 35, 0.4);
+}
+
+.leaderboard-table-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: linear-gradient(135deg,
+            rgba(232, 219, 204, 0.08) 0%,
+            rgba(232, 219, 204, 0.04) 100%);
+    border: 1px solid rgba(232, 219, 204, 0.15);
+    border-radius: 24px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Racama', serif;
+    color: #E8DBCC;
+    text-align: left;
+}
+
+.leaderboard-table th {
+    padding: 1.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: rgba(232, 219, 204, 0.8);
+    border-bottom: 1px solid rgba(232, 219, 204, 0.1);
+    background: rgba(92, 0, 35, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.leaderboard-table td {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid rgba(232, 219, 204, 0.05);
+    font-size: 1rem;
+    transition: background 0.2s ease;
+}
+
+.leaderboard-table tr:last-child td {
+    border-bottom: none;
+}
+
+.leaderboard-table tr:hover td {
+    background: rgba(232, 219, 204, 0.05);
+}
+
+.leaderboard-name-cell {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.leaderboard-name-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.leaderboard-institution-mobile {
+    display: none;
+}
+
+.leaderboard-rank {
+    font-family: 'YesevaOne', serif;
+    color: rgba(232, 219, 204, 0.5);
+    font-size: 1.2rem;
+    min-width: 2rem;
+}
+
+.leaderboard-score-cell {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #fff;
+    text-align: center;
+}
+
+.leaderboard-table th:last-child,
+.leaderboard-table td:last-child {
+    text-align: center;
+}
+
+/* Mobile responsiveness for table */
+@media (max-width: 768px) {
+
+    .leaderboard-table th,
+    .leaderboard-table td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .leaderboard-rank {
+        font-size: 1rem;
+        min-width: 1.5rem;
+    }
+
+    .leaderboard-title {
+        font-size: 2rem;
+    }
+
+    .campus-amb-page {
+        padding-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .leaderboard-table th:nth-child(2),
+    .leaderboard-institution-cell {
+        display: none;
+        /* Hide Institution column on very small screens */
+    }
+
+    .leaderboard-institution-mobile {
+        display: block;
+        font-size: 0.7rem;
+        color: rgba(232, 219, 204, 0.6);
+        font-weight: normal;
+        margin-top: 2px;
+    }
+
+    .leaderboard-table th,
+    .leaderboard-table td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .leaderboard-name-cell {
+        gap: 0.5rem;
+    }
 }
