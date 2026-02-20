@@ -30,7 +30,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="footer-brand">
           <span>Make-A-Ton</span>
-          <span>CITTIC</span>
+          {/* <span>CITTIC</span> */}
         </div>
 
         <SocialLinks />

@@ -96,8 +96,25 @@ export default function Sponsers() {
             <img
             className="sponser-logo"
             src={"sponsors/pechacks-1-white-tr.svg"}
-            alt="Platinum Sponsor"
+            alt="Community Sponsor"
           />
+          
+          </div>
+          <div className="stamp-box">
+            <img
+            className="sponser-logo"
+            src={"sponsors/makeagram.png"}
+            alt="Community Sponsor"
+          />
+          
+          </div>
+          <div className="stamp-box">
+            <img
+            className="sponser-logo"
+            src={"sponsors/Vibhava.png"}
+            alt="Community Sponsor"
+          />
+          
           </div>
         </div>
       </div>
