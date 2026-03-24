@@ -2,14 +2,17 @@
     font-family: "Canicule Display";
     src: url("../../assets/fonts/CaniculeDisplay.ttf") format("truetype");
 }
+
 @font-face {
     font-family: "PlaylistScript";
     src: url("../../assets/fonts/PlaylistScript.otf") format("opentype");
 }
+
 @font-face {
     font-family: "Racama";
     src: url("../../assets/fonts/Racama.otf") format("opentype");
 }
+
 @font-face {
     font-family: "YesevaOne";
     src: url("../../assets/fonts/YesevaOne-Regular.ttf") format("truetype");
@@ -284,6 +287,7 @@
     margin-bottom: 1.5rem;
     border-left: 4px solid #5c0023;
     line-height: 1.5;
+    font-family: "Racama", serif;
 }
 
 .project-problem strong {
@@ -291,7 +295,7 @@
     font-weight: 700;
     display: block;
     margin-bottom: 0.4rem;
-    font-family: "Canicule Display", serif;
+    font-family: "YesevaOne", serif;
     letter-spacing: 1px;
 }
 
@@ -383,7 +387,8 @@
 }
 
 .project-card.is-winner {
-    border-color: rgba(184, 134, 11, 0.4); /* DarkGoldenRod */
+    border-color: rgba(184, 134, 11, 0.4);
+    /* DarkGoldenRod */
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(184, 134, 11, 0.1);
 }
 
@@ -430,7 +435,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
+    background-image:
         radial-gradient(circle at 10% 20%, rgba(92, 0, 35, 0.1) 0%, transparent 40%),
         radial-gradient(circle at 90% 80%, rgba(232, 219, 204, 0.05) 0%, transparent 40%);
     pointer-events: none;
@@ -448,8 +453,13 @@
 }
 
 @keyframes glowMove {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(5%, 5%) scale(1.1); }
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(5%, 5%) scale(1.1);
+    }
 }
 
 .projects-glow-1 {
@@ -474,13 +484,16 @@
     .projects-container {
         padding-top: 100px;
     }
+
     .projects-main-title {
         font-size: 4rem;
     }
+
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
+
     .search-bar-container {
         border-radius: 30px;
         padding: 0.25rem 1rem;
@@ -492,18 +505,22 @@
     .projects-main-title {
         font-size: 3rem;
     }
+
     .project-card-image {
         height: 180px;
     }
+
     .project-links {
         flex-wrap: wrap;
         gap: 0.5rem;
     }
+
     .project-link {
         flex: 1 1 calc(50% - 0.25rem);
         padding: 0.6rem 0.5rem;
         font-size: 0.8rem;
     }
+
     .project-link.details {
         flex: 1 1 100%;
     }
