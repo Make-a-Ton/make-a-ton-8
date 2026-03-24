@@ -5,6 +5,7 @@ import NotFound from "./pages/NotFound/NotFound";
 import Newsletter from "./pages/Newsletter/Newsletter";
 import CampusAmb from "./pages/CampusAmb/CampusAmb";
 import Home from "./pages/Home/Home";
+import Projects from "./pages/projects/projects";
 
 function ExternalRedirect({ to }: { to: string }) {
   useEffect(() => {
@@ -19,6 +20,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/newsletter" element={<Newsletter />} />
       <Route path="/ca" element={<CampusAmb />} />
+      <Route path="/projects" element={<Projects />} />
 
       {/* Redirects */}
       <Route

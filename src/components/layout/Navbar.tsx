@@ -47,10 +47,13 @@ export default function Navbar() {
         >
           Newsletter
         </Link>
-        <span className="menu-item menu-item-coming-soon">
+        <Link
+          to="/projects"
+          className="menu-item"
+          onClick={() => setMenuOpen(false)}
+        >
           Projects made at MAT
-          <span className="coming-soon-tooltip">Coming Soon</span>
-        </span>
+        </Link>
       </div>
     </nav>
   );
