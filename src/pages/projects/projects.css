@@ -351,6 +351,70 @@
     transform: translateY(-3px);
 }
 
+.winners-section {
+    margin-bottom: 6rem;
+    position: relative;
+}
+
+.winners-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(232, 219, 204, 0.3), transparent);
+}
+
+.section-title {
+    font-family: "YesevaOne", serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #e8dbcc;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 20px rgba(232, 219, 204, 0.2);
+}
+
+.winners-grid {
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 3.5rem;
+}
+
+.project-card.is-winner {
+    border-color: rgba(184, 134, 11, 0.4); /* DarkGoldenRod */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(184, 134, 11, 0.1);
+}
+
+.project-card.is-winner:hover {
+    border-color: rgba(184, 134, 11, 0.8);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 50px rgba(184, 134, 11, 0.2);
+}
+
+.project-award-badge {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background: linear-gradient(135deg, #b8860b 0%, #ffd700 100%);
+    color: #1a0a0f;
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    z-index: 3;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    font-family: "Racama", serif;
+}
+
+.regular-grid {
+    border-top: 1px solid rgba(232, 219, 204, 0.1);
+    padding-top: 5rem;
+    margin-top: 2rem;
+}
+
 .no-projects-found {
     text-align: center;
     padding: 8rem 0;

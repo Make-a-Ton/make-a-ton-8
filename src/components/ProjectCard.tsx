@@ -14,6 +14,7 @@ interface ProjectCardProps {
     screenshots: string[];
     track: string;
   };
+  award?: string;
 }
 
 const GithubIcon = () => (
@@ -28,7 +29,7 @@ const VideoIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
 );
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project, award }) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
   
   const thumbnail = project.screenshots && project.screenshots.length > 0 
@@ -42,10 +43,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   };
 
   return (
-    <div className={`project-card ${isExpanded ? 'expanded' : ''}`}>
+    <div className={`project-card ${isExpanded ? 'expanded' : ''} ${award ? 'is-winner' : ''}`}>
       <div className="project-card-image">
         <img src={thumbnail} alt={project.title} loading="lazy" />
         {project.track && <span className="project-track-badge">{project.track}</span>}
+        {award && <div className="project-award-badge"> {award}</div>}
       </div>
       <div className="project-card-content">
         <h3 className="project-title">{project.title}</h3>
@@ -100,10 +102,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               <span>Demo</span>
             </a>
           )}
-          <a href={project.github || "#"} target="_blank" rel="noopener noreferrer" className="project-link details" title="View Details">
+          {/* <a href={project.github || "#"} target="_blank" rel="noopener noreferrer" className="project-link details" title="View Details">
             <ExternalLinkIcon />
             <span>More</span>
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

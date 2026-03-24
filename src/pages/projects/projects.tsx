@@ -7,11 +7,28 @@ import projectsData from "./projects.json";
 import { gsap } from "gsap";
 import matLogo from "../../assets/MAT new logo.png";
 
+const WINNERS_DATA = [
+    { team: "BlueSteel", award: "Best Software" },
+    { team: "Parallax", award: "Best Hardware" },
+    { team: "SaveSense", award: "Overall runner up" },
+    { team: "Ignis", award: "Kireap Track" },
+    { team: "freshers.exe", award: "Hack for CUSAT" },
+];
+
 const Projects: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState("");
     
+    // Categorize projects
+    const winnerProjects = WINNERS_DATA.map(w => {
+        const project = projectsData.find(p => p.teamName === w.team);
+        return project ? { ...project, award: w.award } : null;
+    }).filter(p => p !== null);
+
+    const winnerTeams = WINNERS_DATA.map(w => w.team);
+    const regularProjects = projectsData.filter(p => !winnerTeams.includes(p.teamName));
+
     useEffect(() => {
-        // Entry animation for cards
+        // Entry animation for all cards
         gsap.fromTo(
             ".project-card",
             { opacity: 0, y: 30 },
@@ -32,11 +49,20 @@ const Projects: React.FC = () => {
         );
     }, []);
 
-    const filteredProjects = projectsData.filter(project => 
+    const filteredRegularProjects = regularProjects.filter(project => 
         project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         project.teamName.toLowerCase().includes(searchTerm.toLowerCase()) ||
         project.college.toLowerCase().includes(searchTerm.toLowerCase()) ||
         (project.track && project.track.toLowerCase().includes(searchTerm.toLowerCase()))
+    );
+
+    const filteredWinnerProjects = winnerProjects.filter(project => 
+        project && (
+            project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            project.teamName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            project.college.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            (project.track && project.track.toLowerCase().includes(searchTerm.toLowerCase()))
+        )
     );
 
     return (
@@ -74,17 +100,38 @@ const Projects: React.FC = () => {
                 </header>
 
                 <main className="projects-grid-section">
-                    {filteredProjects.length > 0 ? (
+                    {filteredWinnerProjects.length > 0 && !searchTerm && (
+                        <section className="winners-section">
+                            <h2 className="section-title"> HALL OF FAME</h2>
+                            <div className="projects-grid winners-grid">
+                                {filteredWinnerProjects.map((project) => (
+                                    project && <ProjectCard key={project.id} project={project} award={project.award} />
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
+                    {searchTerm && filteredWinnerProjects.length > 0 && (
                         <div className="projects-grid">
-                            {filteredProjects.map((project) => (
-                                <ProjectCard key={project.id} project={project} />
+                            {filteredWinnerProjects.map((project) => (
+                                project && <ProjectCard key={project.id} project={project} award={project.award} />
                             ))}
                         </div>
-                    ) : (
-                        <div className="no-projects-found">
-                            <p>No projects match your search.</p>
-                        </div>
                     )}
+
+                    <div className="projects-grid regular-grid">
+                        {filteredRegularProjects.length > 0 ? (
+                            filteredRegularProjects.map((project) => (
+                                <ProjectCard key={project.id} project={project} />
+                            ))
+                        ) : (
+                            searchTerm && filteredWinnerProjects.length === 0 && (
+                                <div className="no-projects-found">
+                                    <p>No projects match your search.</p>
+                                </div>
+                            )
+                        )}
+                    </div>
                 </main>
             </div>
 

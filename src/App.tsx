@@ -30,7 +30,7 @@ function App() {
       <Route
         path="/gallery"
         element={
-          <ExternalRedirect to="https://www.playbook.com/s/makeaton/make-a-ton-8-0" />
+          <ExternalRedirect to="https://photos.app.goo.gl/dm84g8joYHW2bG1EA" />
         }
       />
       <Route
