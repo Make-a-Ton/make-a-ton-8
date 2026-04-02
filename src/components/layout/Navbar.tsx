@@ -48,6 +48,13 @@ export default function Navbar() {
           Newsletter
         </Link>
         <Link
+          to="/people"
+          className="menu-item"
+          onClick={() => setMenuOpen(false)}
+        >
+          Meet the Organizers
+        </Link>
+        <Link
           to="/projects"
           className="menu-item"
           onClick={() => setMenuOpen(false)}

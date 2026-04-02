@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./projects.css";
 import Navbar from "../../components/layout/Navbar";
-import Footer from "../../components/layout/Footer";
+import SocialLinks from "../../components/SocialLinks";
 import ProjectCard from "../../components/ProjectCard";
 import projectsData from "./projects.json";
 import { gsap } from "gsap";
@@ -135,7 +135,10 @@ const Projects: React.FC = () => {
                 </main>
             </div>
 
-            <Footer />
+            <footer className="projects-footer">
+                
+                <SocialLinks />
+            </footer>
         </div>
     );
 };

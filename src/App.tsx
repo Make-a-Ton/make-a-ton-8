@@ -9,6 +9,8 @@ import matLogo from '../assets/MAT new logo.png'
 import NotFound from './NotFound'
 import Newsletter from './Newsletter'
 import CampusAmb from './CampusAmb'
+import Organizers from './Organizers'
+import Projects from './pages/projects/projects'
 
 function Home() {
   const cursorRef = useRef<HTMLDivElement>(null)
@@ -287,12 +289,20 @@ function Home() {
           >
             Newsletter
           </a>
-          <span 
-            className="menu-item menu-item-coming-soon"
+          <a 
+            href="/people" 
+            className="menu-item"
+            onClick={() => setMenuOpen(false)}
+          >
+            Meet the Organizers
+          </a>
+          <a 
+            href="/projects" 
+            className="menu-item"
+            onClick={() => setMenuOpen(false)}
           >
             Projects made at MAT
-            <span className="coming-soon-tooltip">Coming Soon</span>
-          </span>
+          </a>
         </div>
       </nav>
 
@@ -655,6 +665,8 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/newsletter" element={<Newsletter />} />
       <Route path="/ca" element={<CampusAmb />} />
+      <Route path="/people" element={<Organizers />} />
+      <Route path="/projects" element={<Projects />} />
       
       {/* Redirects */}
       <Route path="/secondcommit" element={<ExternalRedirect to="https://tally.so/r/pbe2E8" />} />

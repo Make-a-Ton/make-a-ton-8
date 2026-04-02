@@ -48,8 +48,10 @@
 }
 
 .projects-logo-link {
-    display: block;
-    margin-bottom: 2rem;
+    position: absolute;
+    top: clamp(1rem, 3vw, 2rem);
+    left: clamp(1rem, 3vw, 2rem);
+    z-index: 9999;
     transition: transform 0.3s ease;
 }
 
@@ -524,4 +526,22 @@
     .project-link.details {
         flex: 1 1 100%;
     }
+}
+
+/* Projects Page Footer */
+.projects-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 3rem 2rem;
+    border-top: 1px solid rgba(232, 219, 204, 0.1);
+    margin-top: 4rem;
+}
+
+.projects-footer .footer-brand {
+    font-family: 'PlaylistScript', cursive;
+    font-size: 1.5rem;
+    color: #E8DBCC;
 }
