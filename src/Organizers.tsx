@@ -67,7 +67,7 @@ const organizers = [
     name: 'Ashwin Menon',
     photo: '/member_photos/ashwin.jpg',
     linkedin: 'https://www.linkedin.com/in/ashwinmenon502/',
-    instagram: 'instagram.com/ashwin.menon',
+    instagram: 'https://instagram.com/ashwin.menon',
   },
   {
     name: 'Austin Benny',
