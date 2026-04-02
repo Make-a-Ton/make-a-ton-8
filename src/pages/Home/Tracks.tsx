@@ -1,0 +1,131 @@
+import React, { useState, useEffect, useRef } from "react";
+import gsap from "gsap";
+import "./TracksPage.css";
+import boatImage from "../../assets/boat image.png";
+import wavesImage from "../../assets/waves.png";
+import Prizes from "./Prizes"; 
+
+const Tracks: React.FC = () => {
+  const [openTrack, setOpenTrack] = useState<string | null>(null);
+
+  const toggleTrack = (name: string) => {
+    setOpenTrack((prev) => (prev === name ? null : name));
+  };
+
+  const statsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          const stats = statsRef.current?.querySelectorAll(".stat-number");
+          if (stats) {
+            stats.forEach((stat) => {
+              const targetText = stat.textContent || "";
+              const targetValue = parseInt(targetText.replace(/\D/g, ""), 10);
+              const suffix = targetText.replace(/[0-9]/g, "");
+
+              if (!isNaN(targetValue)) {
+                const obj = { value: 0 };
+                gsap.to(obj, {
+                  value: targetValue,
+                  duration: 2,
+                  ease: "power2.out",
+                  onUpdate: () => {
+                    stat.textContent = `${Math.floor(obj.value)}${suffix}`;
+                  },
+                });
+              }
+            });
+          }
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div className="tracks-container">
+      <div className="tracks-content">
+        {/* Stats Section */}
+        <div className="stats-section" ref={statsRef}>
+          <div className="stat-box">
+            <div className="stat-number">100+</div>
+            <div className="stat-label">Participants</div>
+          </div>
+          <div className="stat-box">
+            <div className="stat-number">1900+</div>
+            <div className="stat-label">Registrations</div>
+          </div>
+          <div className="stat-box">
+            <div className="stat-number">50+</div>
+            <div className="stat-label">Colleges</div>
+          </div>
+        </div>
+
+        {/* Tracks + Prizes Section */}
+        <div className="tracks-prizes-wrapper">
+          {/* Tracks */}
+          <div className="tracks-column">
+            <h2 className="section-title">TRACKS</h2>
+
+            <div className="tracks-row">
+              <div
+                className={`track-card clickable ${openTrack === "software" ? "active" : ""}`}
+                onClick={() => toggleTrack("software")}
+              >
+                <span>SOFTWARE</span>
+              </div>
+
+              <div
+                className={`track-card clickable ${openTrack === "hardware" ? "active" : ""}`}
+                onClick={() => toggleTrack("hardware")}
+              >
+                <span>HARDWARE</span>
+              </div>
+
+              <div
+                className={`track-card clickable ${openTrack === "kireap" ? "active" : ""}`}
+                onClick={() => toggleTrack("kireap")}
+              >
+                <span>KIREAP</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Prizes */}
+          <div className="prizes-section">
+            <h2 className="section-title">PRIZES</h2>
+            <p className="prizes-subtitle">Total prize pool of 90K</p>
+            <Prizes />
+          </div>
+        </div>
+
+        {/* Decorative Images */}
+        <img
+          src={boatImage}
+          alt="Boat"
+          className="boat-image"
+          draggable={false}
+          onContextMenu={(e) => e.preventDefault()}
+        />
+        <img
+          src={wavesImage}
+          alt="Waves"
+          className="waves-image"
+          draggable={false}
+          onContextMenu={(e) => e.preventDefault()}
+        />
+      </div>
+    </div>
+  );
+};
+
+export default Tracks;
