@@ -1,9 +1,9 @@
 import "../../App.css";
 
-import webviewImage from "@/assets/Homapage.png";
-import mobileBgImage from "@/assets/Slice 1.png";
-import kathakaliImage from "@/assets/kathakali.png";
-import circleTextImage from "@/assets/circle-text.png";
+import webviewImage from "../../assets/Homapage.png";
+import mobileBgImage from "../../assets/Slice 1.png";
+import kathakaliImage from "../../assets/kathakali.png";
+import circleTextImage from "../../assets/circle-text.png";
 import CursorEffects from "../../components/CursorEffects";
 import Navbar from "../../components/layout/Navbar";
 import Hero from "./Hero";

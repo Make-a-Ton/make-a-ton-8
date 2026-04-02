@@ -1,6 +1,6 @@
 import matLogo from "../../assets/MAT new logo.png";
 import "./About.css";
-import "@/styles/decorative.css";
+import "../../styles/decorative.css";
 import { useGlowEffect } from "../../hooks/useGlowEffect";
 
 export default function Hero() {
