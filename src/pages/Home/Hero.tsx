@@ -15,11 +15,10 @@ export default function Hero() {
         South India's Biggest <span className="hackathon-word">Hackathon</span>
       </p>
       <a
-        target="_blank"
-        rel="noopener noreferrer"
+        href="/projects"
         className="register-button"
       >
-        Happening on Feb 21 & 22
+        View Projects
       </a>
       <div
         className="registration-deadline-wrapper"
