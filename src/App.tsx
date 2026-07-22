@@ -1,6 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
+import LoadingScreen from "./components/LoadingScreen";
 import NotFound from "./pages/NotFound/NotFound";
 import Newsletter from "./pages/Newsletter/Newsletter";
 import CampusAmb from "./pages/CampusAmb/CampusAmb";
@@ -17,8 +18,10 @@ function ExternalRedirect({ to }: { to: string }) {
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
+    <>
+      <LoadingScreen />
+      <Routes>
+        <Route path="/" element={<Home />} />
       <Route path="/newsletter" element={<Newsletter />} />
       <Route path="/ca" element={<CampusAmb />} />
       <Route path="/projects" element={<Projects />} />
@@ -83,7 +86,8 @@ function App() {
       />
 
       <Route path="*" element={<NotFound />} />
-    </Routes>
+      </Routes>
+    </>
   );
 }
 
