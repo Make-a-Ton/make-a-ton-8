@@ -15,6 +15,7 @@ import AboutText from "../../components/AboutText";
 import TracksPage from "./Tracks";
 import Sponsers from "./Sponsers";
 import Footer from "../../components/layout/Footer";
+import Gallery from "../../components/Gallery";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 import { usePreventContextMenu } from "../../hooks/usePreventContextMenu";
 
@@ -79,6 +80,8 @@ export default function Home() {
         <TracksPage />
 
         <Sponsers />
+
+        <Gallery />
 
         <Footer />
 

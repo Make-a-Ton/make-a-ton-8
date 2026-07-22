@@ -34,13 +34,6 @@ export default function Navbar() {
           Campus Ambassador
         </Link>
         <Link
-          to="/gallery"
-          className="menu-item"
-          onClick={() => setMenuOpen(false)}
-        >
-          Gallery
-        </Link>
-        <Link
           to="/newsletter"
           className="menu-item"
           onClick={() => setMenuOpen(false)}

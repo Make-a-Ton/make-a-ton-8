@@ -1,0 +1,171 @@
+.gallery-section {
+  width: 100%;
+  padding: 12rem 2rem 4rem 2rem; /* Increased top padding so heading clears the wave image */
+  background-color: #e5d2be; /* Darker than the FAQ's #efe2d2 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.gallery-waves-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 50px;
+  max-height: 150px;
+  object-fit: cover;
+  transform: scaleY(-1); /* Flips it upside down to transition properly */
+  z-index: 0;
+  pointer-events: none;
+}
+
+.gallery-title {
+  font-family: "Canicule Display", serif;
+  color: #5c0023;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-container {
+  display: flex;
+  gap: 1.5rem;
+  height: 600px;
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+  position: relative;
+  /* Mask to fade out top and bottom */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.gallery-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.gallery-track {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  will-change: transform;
+}
+
+.column-up .gallery-track {
+  animation: scrollUp 25s linear infinite;
+}
+
+.column-down .gallery-track {
+  animation: scrollDown 25s linear infinite;
+  transform: translateY(-50%);
+}
+
+.gallery-item {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-container:hover .gallery-track {
+  animation-play-state: paused;
+}
+
+@keyframes scrollUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes scrollDown {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
+}
+
+@media (max-width: 1024px) {
+  .gallery-container {
+    gap: 1rem;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    height: 450px;
+    gap: 0.8rem;
+  }
+  .gallery-title {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+  /* Show only 2 columns on mobile to keep images visible */
+  .gallery-column:nth-child(3),
+  .gallery-column:nth-child(4) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-container {
+    height: 350px;
+    gap: 0.5rem;
+  }
+}
+
+.gallery-view-more-btn {
+  margin-top: 2.5rem;
+  padding: 1rem 3rem;
+  background: linear-gradient(135deg, rgba(232, 219, 204, 0.9) 0%, rgba(245, 245, 220, 0.8) 100%);
+  color: #5c0023;
+  text-decoration: none;
+  border-radius: 30px;
+  font-family: "Racama", "Canicule Display", serif;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 600;
+  border: 2px solid rgba(92, 0, 35, 0.2);
+  box-shadow: 0 4px 15px rgba(92, 0, 35, 0.1);
+  transition: all 0.3s ease;
+  z-index: 20;
+}
+
+.gallery-view-more-btn:hover {
+  background: linear-gradient(135deg, rgba(92, 0, 35, 0.9) 0%, rgba(92, 0, 35, 1) 100%);
+  color: #e8dbcc;
+  border-color: rgba(232, 219, 204, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(92, 0, 35, 0.3);
+}
